@@ -1,1 +1,7 @@
-HAHHAHHA,It is working!
+uhfjdoasj
+cat 02/02.txt
+[A[B
+
+echo cat 02/02.txt
+echo "Hello"
+[A[A[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B
