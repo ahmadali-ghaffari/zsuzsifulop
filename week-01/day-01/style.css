@@ -1,0 +1,50 @@
+
+.szoveg{
+    background: url("topography.png");
+    padding: 0% 10% 0% 10%;
+}
+h1 {
+    font-size:32px;
+    font-family: 'Merriweather', cursive;
+    font-weight:bold;
+}
+h2 {
+    color:#ff0099;
+    font-size:20px;
+    font-family: 'Merriweather', cursive;
+}
+h3 {
+    font-size:32px;
+    text-align: center;
+    font-family: 'Merriweather', cursive;
+}
+h4 {
+    font-family: 'Merriweather', cursive;
+}
+.fejlec {
+    background:#333333;
+    width:100%; 
+    text-align:right;
+    padding: 1.5em;
+    
+}
+a {
+    color:#ff0099;
+    font-family: consolas, courier;
+    font-size:16px;
+    text-align:right;
+    line-height:1.3em;
+}       
+p {
+    font-family: consolas, courier; 
+}
+.kotojel{
+    text-align:center;
+    font-size:25px;
+    word-spacing:2 em;
+    font-family: consolas, courier;
+}
+.alsobekezdes{
+    font-size:14px;
+    font-family: consolas, courier; 
+}
