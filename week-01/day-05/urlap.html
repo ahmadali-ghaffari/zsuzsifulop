@@ -40,21 +40,22 @@
         padding:0px;
     }
     .left2, .right2{
-    width:48%;
-    height:40px;
-    margin:0px 0px 0px 0px;
-    display:inline-block;
+        width:48%;
+        height:40px;
+        margin:0px 0px 0px 0px;
+        display:inline-block;
     }
     .center1, .center2{
         width:48%;
         height:40px;
         display:inline-block;
-        line height:20px;
+        line-height:20px;
     }
     .lila{
         color:purple;
         font-weight:bold;
-        margin:10px 0px 10px 0px;
+        padding-top:10px;
+        padding-bottom:10px;
     }
     .title{
         color:purple;
@@ -65,7 +66,7 @@
         color:white;
         font-family:Ariel;
         font-size:25px;
-        background-color:#D1BBCA;
+        background-color:#DCD6CD;
         width:100%;
         height:40px;
         border-radius:3%;
@@ -73,7 +74,8 @@
     .csillag{
         color:red;
         font-weight:bold;
-        margin:10px 0px 10px 0px;
+        padding-top:10px;
+        padding-bottom:10px;
     }
     .mezo2{
         height:30px;
@@ -86,11 +88,10 @@
         height:30px;
         width:100%;
         border-radius:3%;
-        margin: 10px, 0px;
         border:1px solid grey;
     }
     .mezo3{
-        height:150px;
+        height:130px;
         width:100%;
         border-radius:3%;
         margin: 20px, 0px 60px 0px;
@@ -109,34 +110,43 @@
     }
     .file2{
         height:45px;
-        width:30%;
+        width:78%;
         border: 1px solid #D1BBCA;
         color:white;
         background-color:purple;
         border-radius:3%;
         text-transform:uppercase;
-        border:10px 0px;
-        margin: 0px 0px 30px 00px;
+        border-bottom:20px;
+        border-top:20px;
     }
     .file3{
-        width:20%;
-        
+        width:50%;
+        height:45px;
     }
     .cimke{
         color:purple;
-        font-type:Ariel;
+        font-family:Ariel;
         font-size:16px;
     }
     .alahuzas{
         text-decoration:underline;
+        padding-bottom:30px;
     }
 
-    input[type="checkbox"]+{
+    input[type="checkbox"]{
         border-radius:3%;
         font-size:300%;
         background-color:white;
         padding:20px;
         background:1px solid purple;
+    }
+    .szurke{
+        color:grey;
+        padding-top: 40px;
+    }
+    .gombbal, .gombjobb{
+        display:inline-block;
+        width:40%;
     }
     
 </style>
@@ -163,8 +173,8 @@
                 <input type="radio" id="female" name="gender" />
                 <label for="male"class="cimke">nő</label>
             </div>
+            <div class=lila>Milyen márkákt szeretsz?</div>
             <div class="blackgrid center1">
-                <div class=lila>Milyen márkákt szeretsz?</div>
                 <input type="checkbox" id="adidas"/>
                 <label for="adidas"class="cimke">Adidas</label><br/>
                 <input type="checkbox" id="apple"/>
@@ -188,6 +198,7 @@
                 <input type="checkbox" id="yahoo"/>
                 <label for="yahoo" class="cimke">Yahoo</label><br/>
             </div>
+            <div class=szurke>Többet is választhatsz!</div>
         </div>
         <div class="yellow right">
                 <div class="liladoboz">Kapcsolat</div>
@@ -214,10 +225,14 @@
         <input type="button" value="Fájl kiválasztása" class="file" /><br/>
         <input type="checkbox" id="felhasználasifeltelek"/>
         <label for="felhasznalasifeltetelek" class="cimke">Elfogadom </label><span class="cimke alahuzas">a felhasználási feltételet.</span/><br/>
-        
+        <div class="gombok">
+            <div class="gombbal">
         <input type="button" value="Mentés" class="file2" />
+            </div>
+            <div class="gombjobb">
         <input type="button" value="Űrlap törlése" class="file file3" />
-       
+            </div>
+        </div>
     </div>
     
 </body>
