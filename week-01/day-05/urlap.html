@@ -4,15 +4,15 @@
 <title>Urlap</title>
 <style>
     .green{
-    background-color:#127731;
+    background-color:#DAD4CC;
     }
     .yellow{
-        background-color: #FFE42E;
-        border: 15px solid red;
+        background-color: #DAD4CC;
+        border: 15px;
     }
     .bigbox{
         width:620px;
-        height:790px;
+        height:1000px;
         box-sizing:border-box;
     }
     .line{
@@ -24,25 +24,170 @@
         height: 45px;
     }
     .left, .right{
-        width: 278px;
+        width: 44%; 
         height: 410px; 
         display:inline-block;
+        vertical-align:top;
     }
     .bottom{
         width:590px;
         height:160px;
+    }
+    .blackgrid{
+        border: 1px;
+        margin:0px;
+        padding:0px;
+    }
+    .left2, .right2{
+    width:48%;
+    height:40px;
+    margin:0px 0px 0px 0px;
+    display:inline-block;
+    }
+    .center{
+        width:96%;
+        height:155px;
+    }
+    .lila{
+        color:purple;
+        font-weight:bold;
+        margin:10px 0px;
+    }
+    .title{
+        color:purple
+        font-family: Arial;
+        font-size:30px;
+    }
+    .liladoboz{
+        color:white;
+        font-family:Ariel;
+        font-size:25px;
+        background-color:#D1BBCA;
+        width:100%;
+        height:40px;
+        border-radius:3%;
+    }
+    .csillag{
+        color:red;
+        font-weight:bold;
+    }
+    .mezo2{
+        height:30px;
+        width:40%;
+        border-radius:3%;
+        margin: 10px, 0px;
+        border:1px solid grey;
+    }
+    .mezo{
+        height:30px;
+        width:100%;
+        border-radius:3%;
+        margin: 10px, 0px;
+        border:1px solid grey;
+    }
+    .mezo3{
+        height:150px;
+        width:100%;
+        border-radius:3%;
+        margin: 20px, 0px;
+        border:1px solid grey;
+    }
+    .file{
+        height:30px;
+        width:30%;
+        border: 1px solid purple;
+        color:purple;
+        background-color:white;
+        border-radius:3%;
+        text-transform:uppercase;
+        border: 10px 0px;
+    }
+    .file2{
+        height:45px;
+        width:30%;
+        border: 1px solid #D1BBCA;
+        color:white;
+        background-color:purple;
+        border-radius:3%;
+        text-transform:uppercase;
+        border:10px 0px;
+    }
+
+    input[type="checkbox"]+{
+        border-radius:3%;
+        font-size:300%;
+        background-color:white;
+        padding:20px;
+        background:1px solid purple;
     }
 </style>
 </head>
 <body>
     <div class="green bigbox">
         <div class="green line"></div>
-        <div class="yellow top">A</div>
+        <div class="yellow top">
+            <div class=title>Profil</div>
+        </div>
         <div class="green line"></div>
-        <div class="yellow left"></div>
-        <div class="yellow right"></div>
+        <div class="yellow left">
+            <div class="liladoboz">Személyes adatok</div>
+            <span class=lila>Név</span><span class=csillag>*</span><br/>
+            <input type="text" name="cell" class="mezo" required>
+            <div class="blackgrid left2">
+                    <div class=lila>Születési éved</div>
+            <input type="number" name="birth" class="mezo2" required>
+            </div>
+            <div class="blackgrid right2">
+                <div class=lila>Nemed</div>
+                <input type="radio" id="male" name="gender" />
+                <label for="male">férfi</label>
+                <input type="radio" id="female" name="gender" />
+                <label for="male">nő</label>
+            </div>
+            <div class="blackgrid center">
+                <div class=lila>Milyen márkákt szeretsz?</div>
+                <input type="checkbox" id="adidas"/>
+                <label for="adidas">Adidas</label><br/>
+                <input type="checkbox" id="apple"/>
+                <label for="apple">Apple</label><br/>
+                <input type="checkbox" id="coca"/>
+                <label for="coca">Coca-cola</label><br/>
+                <input type="checkbox" id="mazda"class="gomb"/>
+                <label for="mazda">Mazda</label><br/>
+                <input type="checkbox" id="nike"/>
+                <label for="nike">Nike</label><br/>
+                   /**************még hiányzik innen */
+                <input type="checkbox" id="Opel"/>
+                <label for="opel">Opel</label><br/>
+            </div>
+        </div>
+        <div class="yellow right">
+                <div class="liladoboz">Kapcsolat</div>
+                <span class=lila>Telefonszám</span><span class=csillag>*</span><br/>
+                <input type="text" name="tel" placeholder="+36 -- --- ---" required class="mezo"><br/>
+                <span class=lila>E-mail cím</span><span class=csillag>*</span><br/>
+                <input type="email" name="email" placeholder="nev@domain.hu" required class="mezo">
+                <div class=lila>Facebook profilod</div>
+                <input type="link" name="facebook" placeholder="http://www.facebook.com/" required class="mezo">
+                <div class=lila>Twitter profilod</div>
+                <input type="link" name="kert" placeholder="http://www.twitter.com/" required class="mezo">
+                <div class=lila>Milyen házban laksz?</div>
+                <select class="mezo">
+                    <option>Panel</option>
+                    <option>Kertesház kert nélkül</option>
+                </select>
+        </div>
         <div class="green line"></div>
-        <div class="yellow bottom"></div>
+        <div class="yellow bottom">
+                <span class=lila>Bemutatkozás</span><span class=csillag>*</span><br/>
+                <textarea id="msg"name:iser_message" class="mezo3"></textarea>
+        </div>
+        <div class="lila">CV fájl feltöltése</div>
+        <input type="button" value="Fájl kiválasztása" class="file" /><br/>
+        <input type="checkbox" id="felhasználasifeltelek"/>
+        <label for="felhasznalasifeltetelek">Elfogadom a felhasználási feltételet.</label><br/>
+        <input type="button" value="Mentés" class="file2" />
+
     </div>
     
 </body>
