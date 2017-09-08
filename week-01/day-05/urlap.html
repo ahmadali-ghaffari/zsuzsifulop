@@ -28,6 +28,7 @@
         height: 410px; 
         display:inline-block;
         vertical-align:top;
+        padding:10px;
     }
     .bottom{
         width:590px;
@@ -44,14 +45,16 @@
     margin:0px 0px 0px 0px;
     display:inline-block;
     }
-    .center{
-        width:96%;
-        height:155px;
+    .center1, .center2{
+        width:48%;
+        height:40px;
+        display:inline-block;
+        line height:20px;
     }
     .lila{
         color:purple;
         font-weight:bold;
-        margin:10px 0px;
+        margin:10px 0px 10px 0px;
     }
     .title{
         color:purple
@@ -70,6 +73,7 @@
     .csillag{
         color:red;
         font-weight:bold;
+        margin:10px 0px 10px 0px;
     }
     .mezo2{
         height:30px;
@@ -89,7 +93,7 @@
         height:150px;
         width:100%;
         border-radius:3%;
-        margin: 20px, 0px;
+        margin: 20px, 0px 60px 0px;
         border:1px solid grey;
     }
     .file{
@@ -101,6 +105,7 @@
         border-radius:3%;
         text-transform:uppercase;
         border: 10px 0px;
+        margin: 0px 0px 30px 0px;
     }
     .file2{
         height:45px;
@@ -111,6 +116,19 @@
         border-radius:3%;
         text-transform:uppercase;
         border:10px 0px;
+        margin: 0px 0px 30px 00px;
+    }
+    .file3{
+        width:20%;
+        
+    }
+    .cimke{
+        color:purple;
+        font-type:Ariel;
+        font-size:16px;
+    }
+    .alahuzas{
+        text-decoration:underline;
     }
 
     input[type="checkbox"]+{
@@ -120,13 +138,14 @@
         padding:20px;
         background:1px solid purple;
     }
+    
 </style>
 </head>
 <body>
     <div class="green bigbox">
         <div class="green line"></div>
         <div class="yellow top">
-            <div class=title>Profil</div>
+            <div class="title">Profil</div>
         </div>
         <div class="green line"></div>
         <div class="yellow left">
@@ -140,31 +159,40 @@
             <div class="blackgrid right2">
                 <div class=lila>Nemed</div>
                 <input type="radio" id="male" name="gender" />
-                <label for="male">férfi</label>
+                <label for="male" class="cimke">férfi</label>
                 <input type="radio" id="female" name="gender" />
-                <label for="male">nő</label>
+                <label for="male"class="cimke">nő</label>
             </div>
-            <div class="blackgrid center">
+            <div class="blackgrid center1">
                 <div class=lila>Milyen márkákt szeretsz?</div>
                 <input type="checkbox" id="adidas"/>
-                <label for="adidas">Adidas</label><br/>
+                <label for="adidas"class="cimke">Adidas</label><br/>
                 <input type="checkbox" id="apple"/>
-                <label for="apple">Apple</label><br/>
+                <label for="apple" class="cimke">Apple</label><br/>
                 <input type="checkbox" id="coca"/>
-                <label for="coca">Coca-cola</label><br/>
+                <label for="coca" class="cimke">Coca-cola</label><br/>
                 <input type="checkbox" id="mazda"class="gomb"/>
-                <label for="mazda">Mazda</label><br/>
+                <label for="mazda" class="cimke">Mazda</label><br/>
                 <input type="checkbox" id="nike"/>
-                <label for="nike">Nike</label><br/>
-                   /**************még hiányzik innen */
+                <label for="nike"class="cimke">Nike</label><br/>
+            </div>
+            <div class="blackgrid center2">
                 <input type="checkbox" id="Opel"/>
-                <label for="opel">Opel</label><br/>
+                <label for="opel" class="cimke">Opel</label><br/>
+                <input type="checkbox" id="rayban"/>
+                <label for="rayban" class="cimke">Ray-Ban</label><br/>
+                <input type="checkbox" id="starbucks"/>
+                <label for="starbucks" class="cimke">Starbucks</label><br/>
+                <input type="checkbox" id="tesla"/>
+                <label for="tesla" class="cimke">Tesla</label><br/>
+                <input type="checkbox" id="yahoo"/>
+                <label for="yahoo" class="cimke">Yahoo</label><br/>
             </div>
         </div>
         <div class="yellow right">
                 <div class="liladoboz">Kapcsolat</div>
                 <span class=lila>Telefonszám</span><span class=csillag>*</span><br/>
-                <input type="text" name="tel" placeholder="+36 -- --- ---" required class="mezo"><br/>
+                <input type="text" name="tel" placeholder="+36 -- --- ----" required class="mezo"><br/>
                 <span class=lila>E-mail cím</span><span class=csillag>*</span><br/>
                 <input type="email" name="email" placeholder="nev@domain.hu" required class="mezo">
                 <div class=lila>Facebook profilod</div>
@@ -185,9 +213,11 @@
         <div class="lila">CV fájl feltöltése</div>
         <input type="button" value="Fájl kiválasztása" class="file" /><br/>
         <input type="checkbox" id="felhasználasifeltelek"/>
-        <label for="felhasznalasifeltetelek">Elfogadom a felhasználási feltételet.</label><br/>
+        <label for="felhasznalasifeltetelek" class="cimke">Elfogadom </label><span class="cimke alahuzas">a felhasználási feltételet.</span/><br/>
+        
         <input type="button" value="Mentés" class="file2" />
-
+        <input type="button" value="Űrlap törlése" class="file file3" />
+       
     </div>
     
 </body>
