@@ -10,3 +10,12 @@
 # %%%%%
 #
 # The square should have as many lines as the number was
+c=10
+h="%"
+s=" "
+for i in range (1,c+1):
+    if i==1 or i==c:
+        print(h*c)
+    
+
+        
