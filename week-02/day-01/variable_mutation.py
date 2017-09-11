@@ -66,7 +66,7 @@ else:
 
 h = 1357988018575474
 # tell if it has 11 as a divisor (pras a boolean)
-if print(h%11) ==0:
+if h%11 ==0:
     print(True)
 else: 
     print(False)

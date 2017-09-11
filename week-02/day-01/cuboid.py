@@ -3,3 +3,12 @@
 # 
 # Surface Area: 600
 # Volume: 1000
+a=10
+b=40
+c=60
+
+Volume = a*b*c
+print(Volume)
+
+Surface = 2*((a*b)+(c*a)+(c*b))
+print(Surface)
