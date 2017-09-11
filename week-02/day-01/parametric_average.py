@@ -4,3 +4,11 @@
 # integers like:
 #
 # Sum: 22, Average: 4.4
+
+sum=0
+d= int(input("Give me a repeat number!"))
+for i in range(0,d):
+    sum += int(input("Give me the number!"))
+print("Sum: " + str(sum) + " Average: " + str(sum/(i-1)) )
+   
+
