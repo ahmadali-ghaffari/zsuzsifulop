@@ -1,6 +1,9 @@
 # Add "a" to every string in far
 
 far = ["kuty", "macsk", "kacs", "rók", "halacsk"]
-for i in (0,4):
-    far += "a"
-print(far)
+
+def add (letter):
+    for i in range(len(far)):
+        far[i] +=letter 
+    print(far)
+add('a')
