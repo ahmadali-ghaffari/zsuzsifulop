@@ -13,9 +13,5 @@ words[5]=a
 print(words)
 total=[]
 
-for i in range(len(words)):
-    row = []
-    for j in range(len(words)):
-        row.appeand(print(words[i]+" "))
 
 print(total)
