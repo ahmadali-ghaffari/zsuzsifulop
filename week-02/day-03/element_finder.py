@@ -4,4 +4,5 @@ numbers = [1, 2, 3, 4, 5, 6, 8];
 for i in range(len(numbers)):
     if numbers[i]==7:
         print("Hoooray")
-    
+if numbers !=7:
+    print("No")
