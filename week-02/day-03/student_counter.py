@@ -20,6 +20,6 @@ def sum():
         sum=0
         for i in range(len(students)):
                 if students[i]['candies']<5:
-                        sum += students[i]['candies']
+                        sum += students[i]['age']
         print("The sum is: ", sum)
 sum()
