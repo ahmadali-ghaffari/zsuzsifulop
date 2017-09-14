@@ -1,15 +1,15 @@
 input ="this is what I'm searching in" 
-part="searching"
-  
-print(input[3])
-print(part[3])
-for i in input:
-    next=False
-    for j in part:
-        if str(input[i]) == str(part[j]):
-            print(input[i])
-            next=True
-    if next == False:
-        print("wohr")
+part="what"
 
-
+index = -1
+for i in range(0, len(input) - len(part) + 1):
+    found = True
+    for j in range(0, len(part)):
+        if input[i + j] != part[j]:
+            found = False
+            break
+    if found:
+        index = i
+        break
+    
+print(index)
