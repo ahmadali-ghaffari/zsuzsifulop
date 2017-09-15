@@ -1,9 +1,14 @@
-number= "222"
-length_of_the_number=len(number)
+number_global= "407"
 
-amstrong_number = 0
+def armstrong(number):
 
-for i in range(len(number)):
-    amstrong_number += int(number[i]) ** length_of_the_number
+    armstrong_number = 0
+    length_of_the_number=len(number)
 
-print(amstrong_number)
+    for i in range(len(number)):
+        armstrong_number += int(number[i]) ** length_of_the_number
+    
+    if armstrong_number == int(number):
+        print("The " + number + " is an Armstrong number!")
+    
+armstrong(number_global)
