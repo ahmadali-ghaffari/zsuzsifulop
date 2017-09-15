@@ -1,7 +1,7 @@
 import random
 cycle_global = int(input("How many cycle would you like? "))
 from_which_number_global = int(input("Give me the first number of the range where I can guess my number! "))
-until_which_number_global =int(input("Give me the last number of the range where I can guess my number! "))
+until_which_number_global = int(input("Give me the last number of the range where I can guess my number! "))
 
 def rounds_and_range(cycle, from_which_number, until_which_number):
     
@@ -12,10 +12,10 @@ def rounds_and_range(cycle, from_which_number, until_which_number):
     for i in range(cycle):
         guessed_number = int(input("Give me a number! "))
         if guessed_number > the_number:
-            print("Too high. You have " + str(cycle-i-1) +" lives left" )
+            print("Too high. You have " + str(cycle-i-1) +" rounds left" )
             
         elif guessed_number < the_number:
-            print("Too low. You have " + str(cycle-i-1) +" lives left.")
+            print("Too low. You have " + str(cycle-i-1) +" rounds left.")
         
         elif guessed_number == the_number:
             print("Congratulations. You won!")
