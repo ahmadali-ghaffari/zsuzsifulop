@@ -1,5 +1,6 @@
 # Create a method that decrypts reversed-lines.txt
 
+
 file_name_global = "reversed-lines.txt"
 def reversed_lines(file_name):
     try:
@@ -20,4 +21,5 @@ def reversed_lines(file_name):
 
 
 reversed_lines(file_name_global)
+   
    
