@@ -15,11 +15,6 @@ def basic_squares(maximum_width, x_starting_point, y_starting_point):
     if maximum_width < 10:
         return 0
     else:
-        # basic_squares(maximum_width / 3, 100, 0)
-        # basic_squares(maximum_width / 3, 0, 100)
-        # basic_squares(maximum_width / 3, 200, 100)
-        # basic_squares(maximum_width / 3, 100, 200)
-        
         return basic_squares(maximum_width / 3, x_starting_point + maximum_width / 3, y_starting_point), basic_squares(maximum_width / 3, x_starting_point, y_starting_point + maximum_width / 3), basic_squares(maximum_width / 3, x_starting_point + 2 * maximum_width / 3, y_starting_point + maximum_width / 3), basic_squares(maximum_width / 3, x_starting_point + maximum_width /3 , y_starting_point + 2 * maximum_width / 3)
 basic_squares(300, 0, 0)
 
