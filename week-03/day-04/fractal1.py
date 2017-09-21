@@ -2,15 +2,15 @@ from tkinter import *
 
 root = Tk()
 root.configure(background ='black')
-canvas = Canvas(root, width='300', height='300')
+canvas = Canvas(root, width='300', height='300',bg="yellow")
 canvas.pack()
-square = canvas.create_rectangle(0,  0, 300, 300, fill = "yellow")
+
 def basic_squares(maximum_width, x_starting_point, y_starting_point):
     size = maximum_width / 3
-    smaller_square_1 = canvas.create_rectangle(x_starting_point, y_starting_point + size, x_starting_point + size, y_starting_point + (2* size))
-    smaller_square_2 = canvas.create_rectangle(x_starting_point + size, y_starting_point + (2* size), x_starting_point + (2 * size), y_starting_point + (3 * size))
-    smaller_square_3 = canvas.create_rectangle(x_starting_point + (2 * size), y_starting_point + size, x_starting_point + (3 * size), y_starting_point + (2* size))
-    smaller_square_4 = canvas.create_rectangle(x_starting_point + size, y_starting_point, x_starting_point + (2 * size), y_starting_point + size)
+    smaller_square_1 = canvas.create_rectangle(x_starting_point, y_starting_point + size, x_starting_point + size, y_starting_point + (2* size), fill = "yellow")
+    smaller_square_2 = canvas.create_rectangle(x_starting_point + size, y_starting_point + (2* size), x_starting_point + (2 * size), y_starting_point + (3 * size), fill = "yellow")
+    smaller_square_3 = canvas.create_rectangle(x_starting_point + (2 * size), y_starting_point + size, x_starting_point + (3 * size), y_starting_point + (2* size), fill = "yellow")
+    smaller_square_4 = canvas.create_rectangle(x_starting_point + size, y_starting_point, x_starting_point + (2 * size), y_starting_point + size, fill = "yellow")
 
     if maximum_width < 10:
         return 0
