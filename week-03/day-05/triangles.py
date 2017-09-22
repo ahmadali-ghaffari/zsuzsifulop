@@ -1,14 +1,19 @@
 from tkinter import *
-
+import time
+import random
 root = Tk()
 root.configure(background ='black')
 canvas = Canvas(root, width='600', height='600')
 canvas.pack()
 size = 600
 def triangle(x, y, size):
-    canvas.create_line(x, y, x + size, y)
-    canvas.create_line(x, y, x + size / 2, y + size)
-    canvas.create_line(x + size/2, y + size, x + size, y)
+    time.sleep(0.1)
+    canvas.update()
+    r = lambda: random.randint(0,255)
+    random_color = '#%02X%02X%02X' % (r(),r(),r())
+    canvas.create_line(x, y, x + size, y, fill = random_color)
+    canvas.create_line(x, y, x + size / 2, y + size, fill = random_color)
+    canvas.create_line(x + size/2, y + size, x + size, y, fill = random_color)
 
     if size < 10:
         return 
