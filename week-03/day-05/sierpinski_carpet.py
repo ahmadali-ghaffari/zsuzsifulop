@@ -1,5 +1,6 @@
 from tkinter import *
-
+import random
+import time
 root = Tk()
 root.configure(background ='black')
 canvas = Canvas(root, width='600', height='600')
@@ -8,7 +9,11 @@ maximum_width = 600
 size = maximum_width / 3
 
 def mother_square(x_starting_point, y_starting_point, size):
-    square = canvas.create_rectangle(x_starting_point, y_starting_point, x_starting_point + size, y_starting_point + size, fill = "black")
+    r = lambda: random.randint(0,255)
+    random_color = '#%02X%02X%02X' % (r(),r(),r())
+    time.sleep(0.1)
+    canvas.update()
+    square = canvas.create_rectangle(x_starting_point, y_starting_point, x_starting_point + size, y_starting_point + size, fill = random_color)
 
 
 def sierpinski_carpet(x, y, size):
