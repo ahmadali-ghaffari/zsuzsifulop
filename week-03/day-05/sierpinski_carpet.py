@@ -21,17 +21,10 @@ def sierpinski_carpet(x, y, size):
         sierpinski_carpet(x + size , y - 2 * size, size)
         sierpinski_carpet(x + 4 * size , y + size, size)
         sierpinski_carpet(x + size , y + 4 * size, size)
-
         sierpinski_carpet(x + 4 * size , y + 4 * size, size)
         sierpinski_carpet(x + 4 * size , y - 2 * size, size)
         sierpinski_carpet(x - 2 * size , y - 2 * size, size)
         sierpinski_carpet(x - 2 * size , y + 4 * size, size) 
 
 sierpinski_carpet(200, 200, size)
-
-
-
-
-
-
 root.mainloop()
