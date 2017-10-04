@@ -34,6 +34,30 @@ def map_draw():
         a += 70
 map_draw()
 
+map = [[0, 0, 0, 1, 0, 1, 0, 0, 0, 0], 
+    [0, 0, 0, 1, 0, 1, 0, 1, 1, 0], 
+    [0, 1, 1, 1, 0, 1, 0, 1, 1, 0], 
+    [0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+    [1, 1, 1, 1, 0, 1, 1, 1, 1, 0], 
+    [0, 1, 0, 1, 0, 0, 0, 0, 1, 0], 
+    [0, 1, 0, 1, 0, 1, 1, 0, 1, 0], 
+    [0, 0, 0, 0, 0, 1, 1, 0, 1, 0],
+    [0, 1, 1, 1, 0, 0, 0, 0, 1, 0], 
+    [0, 0, 0, 1, 0, 1, 1, 0, 1, 0], 
+    [0, 1, 0, 1, 0, 1, 0, 0, 0, 0]]
+
+def wall_or_floor(lines_index, element_index):  
+    for i, lines in enumerate(map): # i=sor indexe, lines=érték
+        for j, element in enumerate(lines):
+            if i == lines_index and j == element_index and element == 0:
+                print(str(element))
+                return 0
+            elif i == lines_index and j == element_index and element == 1:
+                print(str(element))
+                return 1
+                
+wall_or_floor(0, 3)
+
 
 def cell_wall():
     print(get.cell(0,0))
@@ -54,23 +78,29 @@ class Entity(object):
         self.costume = costume
         canvas.itemconfigure(self.image_entity, image=self.costume)
 
-def on_key_press(e):
-    if ( e.keysym == 'Up' ):
-        hero.move(0,-70)
-        hero.costume = hero_up
-        hero.update_costume(hero_up)
-    elif( e.keysym == 'Down' ):
-        hero.move(0,70)
-        hero.update_costume(hero_down)
-    elif( e.keysym == 'Right' ):
-        hero.move(70,0)
-        hero.costume = hero_right
-        hero.update_costume(hero_right)
-    elif( e.keysym == 'Left' ):
-        hero.move(-70,0)
-        hero.costume = hero_left
-        hero.update_costume(hero_left)
-
+    def on_key_press(self, e):
+        coords = canvas.coords(self.image_entity)
+        print(coords)
+        if ( e.keysym == 'Up' ):
+            if coords[1] > 35:
+                self.move(0,-70)
+                self.update_costume(hero_up)
+                self.hero.update_costume(hero_up)
+        elif( e.keysym == 'Down' ):
+            if coords[1] < 666:
+                self.move(0,70)
+                self.update_costume(hero_down)
+        elif( e.keysym == 'Right' ):
+            if coords[0] < 665:
+                self.move(70,0)
+                self.costume = hero_right
+                self.update_costume(hero_right)
+        elif( e.keysym == 'Left' ):
+            if coords[0] > 35:
+                self.move(-70,0)
+                self.costume = hero_left
+                self.update_costume(hero_left)
+        
 
 class Hero(Entity):
     def __init__(self):
@@ -79,7 +109,8 @@ class Hero(Entity):
 hero = Entity()
 hero.entity_draw()
 
-root.bind("<KeyPress>", on_key_press)
+
+root.bind("<KeyPress>", hero.on_key_press)
 
 root.mainloop()
 
