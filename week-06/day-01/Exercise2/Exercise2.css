@@ -1,0 +1,19 @@
+.container{
+    display:flex;
+}
+
+.yellow{
+    background: yellow;
+    position: relative;
+    height: 300px;
+    width: 600px;
+}
+
+.purple{
+    background: purple;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 100px;
+    left: 250px;
+}
