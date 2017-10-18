@@ -1,0 +1,48 @@
+.background{
+    background: blue;
+    height: 920px;
+    width: 920px; 
+    display: flex;
+}
+
+table{
+    background: white;
+    color: grey;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 24px;
+    font-family: Calibri;
+    vertical-align: center;
+    border-radius: 2%;
+    margin: 100px auto;
+}
+
+th{
+    background: black;
+    color: white;
+    padding: 15px;
+    border-bottom: 4px solid grey;
+    width: 25%;
+    border-radius: 2%;
+}
+
+td{
+    padding: 15px;
+}
+
+th{
+    border-left: 2px solid grey;
+    padding: 15px;
+}
+
+tr{
+    border-bottom: 2px solid grey;
+}
+
+table tr:nth-child(odd){
+    background: lightgrey;
+}
+
+table td:nth-child(odd){
+    border-right: 2px solid grey;
+}
