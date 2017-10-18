@@ -1,0 +1,44 @@
+.background{
+    background:grey;
+    width: 940px;
+    height:940px;
+    Z-index:1;
+    display: flex;
+    
+}
+.square{
+    width:100px;
+    height:100px;
+    float:left;
+    position:absolute;
+    margin:25px;
+}
+.white{
+    background:white;
+    transform: rotate(45deg);
+    Z-index:2;
+    
+}
+.top{
+    display:flex;
+    flex-direction: row;
+    border:2px solid red;
+    z-index: 4;
+    justify-content: center;
+    align-items: center;
+}
+.text{
+    position:abolute;
+    color:red;
+    font-size:16px;
+    Z-index:3;
+   
+    
+    
+}
+.top:hover{
+    transform: rotate(45deg)
+}
+.top:hover .text{
+    transform: rotate(315deg);
+}
