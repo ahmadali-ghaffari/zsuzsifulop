@@ -1,0 +1,48 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    grid-template-areas: "one green green"
+                         "two green green"
+                         "three four five";
+    grid-gap:10px;
+    margin: 0 auto;
+    max-width: 94%;
+    background:darkslategrey;
+    
+}
+.item{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.one{
+    grid-area: one;
+    background: purple;
+}
+.two{
+    grid-area: two;
+    background: purple;
+}
+.three{
+    grid-area: three;
+    background: purple;
+}
+.four{
+    grid-area: four;
+    background: purple;
+}
+.five{
+    grid-area: five;
+    background: purple;
+}
+.green{
+    grid-area: green;
+    background:green;
+}
+.yellow{
+    background:yellow;
+    width: 600px;
+    height: 300px;
+}
