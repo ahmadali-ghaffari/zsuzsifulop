@@ -1,0 +1,25 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap:1%;
+    margin: 0 auto;
+    max-width: 94%;
+    background:purple;
+    font-style: Arial;
+    color:white;
+    font-size:20px;
+    height:150px;
+    padding: 1%;
+}
+.item{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.yellow{
+    background:yellow;
+}
+.green{
+    background:green;
+    grid-column: 2/3 
+}
