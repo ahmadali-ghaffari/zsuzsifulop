@@ -1,0 +1,24 @@
+.main_content{
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(7, minmax(150px, auto));
+    grid-template-areas: "picture text"
+                        "picture buttons";
+}
+
+
+.feature_image{
+    grid-area:picture;
+}
+
+.right_text_part{
+    grid-area:text;
+    background: #1F1F1F;
+        
+}
+
+.buttons{
+    grid-area:buttons;
+    background: silver;
+   
+}
