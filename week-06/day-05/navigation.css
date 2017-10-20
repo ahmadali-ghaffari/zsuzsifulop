@@ -1,0 +1,49 @@
+body{
+    margin:0;
+    width: 1366px;
+    height: 1000px;
+
+}
+.image{
+    background: #a5a5a5;
+}
+.upperline{
+    display:flex;
+}
+.shopping{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: #DDDDDD;
+}
+
+.text{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    
+}
+.modules{
+    font-family: 'Patua One', cursive;
+    font-size:15px;
+    color:grey;
+    font-weight: bold;
+    padding: 10px;
+    
+}
+
+a{
+    text-decoration: none;
+    color:darkgrey;
+}
+
+a:hover{
+    background:grey;
+    padding-top: 30px;
+    padding-bottom:30px;
+    padding-left:10px;
+    padding-right:10px;
+    text-decoration: normal;
+    color:black;
+}
