@@ -1,14 +1,16 @@
 .background{
     background:grey;
-    width: 940px;
-    height:940px;
-    Z-index:1;
+    width: 500px;
+    height: 500px;;
+    Z-index: 1;
     display: flex;
-    
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 .square{
-    width:100px;
-    height:100px;
+    width:98px;
+    height:98px;
     float:left;
     position:absolute;
     margin:25px;
@@ -16,29 +18,25 @@
 .white{
     background:white;
     transform: rotate(45deg);
-    Z-index:2;
-    
+    Z-index: 2;
 }
-.top{
+.red{
     display:flex;
-    flex-direction: row;
     border:2px solid red;
-    z-index: 4;
+    Z-index: 4;
     justify-content: center;
     align-items: center;
 }
 .text{
-    position:abolute;
+    position:absolute;
     color:red;
     font-size:16px;
-    Z-index:3;
-   
-    
-    
+    Z-index: 3;
+    font-weight: bold;
 }
-.top:hover{
-    transform: rotate(45deg)
+.red:hover{
+    transform: rotate(45deg);
 }
-.top:hover .text{
+.red:hover .text{
     transform: rotate(315deg);
 }
