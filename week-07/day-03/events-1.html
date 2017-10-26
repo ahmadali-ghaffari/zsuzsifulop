@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Workshop: EventListeners</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    div {
+      height: 100vh;
+    }
+    .party {
+      background: red; //*url(https://media.giphy.com/media/4c4jQPdVv381G/giphy.gif);*//
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <button>Party</button>
+  </div>
+  <script>
+      var button = document.querySelector('button');
+      var bodyElement = document.querySelector('body');
+      function ClickOn () {
+          if (bodyElement.classList.contains("party")){
+            bodyElement.classList.remove("party");
+          } else {
+            bodyElement.classList.add("party");
+          }
+    
+    }
+    button.addEventListener('click', ClickOn);
+  </script>
+  <!-- You can work in the html or in a separate js file. Like:
+  <script>
+    Turn the party on and off by clicking the button. (the whole page)
+  </script>
+  OR
+  <script src="events-1.js"></script> -->
+</body>
+</html>
