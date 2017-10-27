@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href = "image_slider.css" type = "text/css" rel="stylesheet">
+    <title> Image Slider</title>
+  </head>
+<body>
+    <div class = 'middle'>
+        <div class = "left sidebar">
+            <a href=#>
+                <img src="less.png" alt="less" height=20px width=20px class='next'>
+            </a>
+        </div>
+        <div class ="image">
+            <img src="1.jpeg" alt="feature_picture" height=70% width=80% class = "featurepic">
+        </div>
+        <div class = "right sidebar">
+            <a href=#>
+                <img src="more.png" alt="more" height=20px width=20px class='previous'>
+            </a>
+        </div>
+    </div>
+    <div class="text">
+        <div class="small 1">
+            <a href=# >
+                <img src="1.jpeg" alt="Autumn" width=60px height=60px class='the1'>
+            </a>
+        </div>
+        <div class="small 2">
+            <a href=#>
+                <img src="2.jpeg" alt="Autumn" width=60px height=60px class='the1'>
+            </a> 
+        </div>
+        <div class="small 3">
+            <a href=#>
+                <img src="3.jpeg" alt="Autumn" width=60px height=60px class="the3">
+            </a> 
+        </div>
+        <div class="small 4">
+            <a href=#>
+                <img src="4.jpeg" alt="Autumn" width=60px height=60px class="the4">
+            </a>    
+        </div>
+        <div class="small 5">
+            <a href=#>
+                <img src="5.jpeg" alt="Autumn" width=60px height=60px class="the5">
+            </a>
+        </div>
+    </div>
+    <script>
+        var pictures = ['1.jpeg', '2.jpeg', '3.jpeg', '4.jpeg', '5.jpeg'];
+        var picture_class =['the1', 'the2', 'the3', 'the4', 'the5']
+        var current_picture = document.querySelector('.featurepic');
+        var fifth = document.querySelector('.the5');
+        
+        console.log(fifth.getAttribute('class'));
+        
+        
+        
+        
+        
+        prev.addEventListener('click', prevpic);
+    </script>
+</body>
+</html>
