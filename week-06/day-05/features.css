@@ -5,20 +5,24 @@
     grid-template-areas: "picture text"
                         "picture buttons";
 }
-
-
 .feature_image{
     grid-area:picture;
 }
 
 .right_text_part{
     grid-area:text;
-    background: #1F1F1F;
-        
+    background: #1F1F1F;    
 }
-
 .buttons{
     grid-area:buttons;
     background: silver;
-   
+}
+.click:hover{
+    padding:0px;
+    
+}
+.clicktext{
+    color:red;
+    font-weight: bold;
+    margin: 20px;
 }
