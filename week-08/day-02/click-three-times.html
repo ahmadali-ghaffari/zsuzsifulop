@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple button</title>
+    
+</head>
+<body>
+        <button class="button">I am a simple button</button>
+        <p></p>
+    <script>
+    var Bool = false; 
+    setTimeout( function(){
+        Bool = true;
+    }, 5000);
+        var button = document.querySelector('.button');
+        var myP = document.querySelector('p');
+        var counter = 1;
+        function ClickOn(){
+            if (counter ===3){
+                myP.textContent ="5 seconds ellapsed and clicked " + counter +" times";
+            }
+        }
+        button.addEventListener('click', function(){
+            if (Bool) {
+                ClickOn();
+                counter++; 
+            }
+        });   
+    </script>
+</body>
+</html>
