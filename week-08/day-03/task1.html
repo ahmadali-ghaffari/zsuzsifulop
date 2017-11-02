@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>API test</title>
+    <style>
+      body {
+        margin: 20px;
+        background: lightblue;
+        font-size: 22px;
+      }
+      .big{
+          width: 600px;
+          height: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="big"><img src="" alt="">
+    </div>
+    <div class= "small"></div>
+    <script>
+        var myRequest = new XMLHttpRequest();
+        myRequest.open("GET", "https://api.giphy.com/v1/stickers/trending?api_key=NcgnTKQWJ0pf2dbsbNfRhc5ItlgXdcoK&limit=25&rating=G", false);
+        myRequest.send(null);
+        var requestAPI = JSON.parse(myRequest.response);
+
+        var smallContainer = document.querySelector(".small");
+        var bigContainer = document.querySelector(".big");
+
+        for (let i = 0; i < 17; i++){
+            var smallPic = document.createElement('img');
+            var bigPic = document.querySelector('.big img');
+            smallPic.setAttribute('src',requestAPI.data[i].images.fixed_width_small_still.url);
+            smallContainer.appendChild(smallPic);
+        };  
+        var smallPicList = document.querySelectorAll(".small img");
+        var BigPic = document.querySelector(".big img");
+        smallPicList.forEach(function(element, i) {
+            element.addEventListener('click', function(){
+                clickOn(i);
+            });
+        }, this);
+
+        function clickOn(i){
+            BigPic.setAttribute('src', requestAPI.data[i].images.downsized.url)
+        };
+    
+    </script>
+  </body>
+</html>
