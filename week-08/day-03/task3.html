@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>API test</title>
+    <style>
+      body {
+        margin: 20px;
+        background: lightblue;
+        font-size: 22px;
+      }
+      .big{
+          width: 600px;
+          height: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/action_page.php">
+        <input type="text" name="fname" class = "input"><br>
+    </form>
+    <button>  Clik on me </button>
+    <div class="text">
+    </div>
+    <div></div>
+    <iframe
+        width="600"
+        height="450"
+        frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD3hLQGvMy3qaofioIQqazUdTYNM3cUcOI
+        &q=Space+Needle,Seattle+WA&center=-33.8569,151.2152" allowfullscreen>
+    </iframe>
+    <script>
+        var myText = document.querySelector(".text");
+        var myInput = document.querySelector(".input");
+        var myButton = document.querySelector("button");
+        myButton.addEventListener('click', function(){
+            var url = "https://devru-latitude-longitude-find-v1.p.mashape.com/latlon.php?location=";
+            var cityName = myInput.value
+            var citySplit = cityName.split(" ");
+            var cityJoin = citySplit.join('+');
+            url += cityJoin;
+            var myRequest = new XMLHttpRequest();
+            myRequest.open('GET', url, false);
+            myRequest.setRequestHeader("X-Mashape-Key", 'errHnjWr7xmshM6ff3NCxF8lcc7Sp1kR9FxjsnF0bS5ZDCn95u');
+            myRequest.setRequestHeader("Accept", "application/json");
+            myRequest.send(null);
+            var requestAPI = JSON.parse(myRequest.response);
+            var lat = requestAPI.Results[0].lat;
+            var lon = requestAPI.Results[0].lon;
+            console.log(requestAPI.Results[0].name)
+            myText.textContent = "Latitude: "+ lat + ' Longnitude: '+ lon; 
+            var mapURL = "https://www.google.com/maps/embed/v1/place?key=AIzaSyD3hLQGvMy3qaofioIQqazUdTYNM3cUcOI&q="
+            mapURL += requestAPI.Results[0].name,
+            mapURL += "&center=" + lat + "," + lon;
+            var myFrame = document.querySelector("iframe");
+            myFrame.setAttribute('src', mapURL);
+
+        })
+
+    </script>
+  </body>
+</html>
