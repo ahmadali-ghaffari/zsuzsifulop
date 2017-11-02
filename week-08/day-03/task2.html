@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>API test</title>
+    <style>
+      body {
+        margin: 20px;
+        background: lightblue;
+        font-size: 22px;
+      }
+      .big{
+          width: 600px;
+          height: 600px;
+      }
+    </style>
+  </head>
+  <body>
+      <h>Moon landings</h>
+    <div class="moonlist"><img src="" alt="">
+    </div>
+    
+    <script>
+        var myRequest = new XMLHttpRequest();
+        myRequest.open("GET", "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=7a733175775749d8bb6e66fed87ae3e7&begin_date=19690720&end_date=19690720",false)
+        myRequest.send(null);
+        var requestAPI = JSON.parse(myRequest.response);
+        //console.log(requestAPI.response.docs[0].headline.main) //headline
+        //console.log(requestAPI.response.docs[0].pub_date) //pub_date
+        //console.log(requestAPI.response.docs[0].snippet) //snippet
+        //console.log(requestAPI.response.docs[0].web_url) //web_url
+        var moonList = document.querySelector('.moonlist');
+        for (let i = 0; i < requestAPI.response.docs.length; i++ ){
+            if (requestAPI.response.docs[i].snippet.search("lunar") != -1){
+                var headline = requestAPI.response.docs[i].headline.main; //headline
+                var pubDate = requestAPI.response.docs[i].pub_date; //pub_date
+                var snippet = requestAPI.response.docs[i].snippet; //snippet
+                var webURL = requestAPI.response.docs[i].web_url; //web_url
+                var link = document.createElement('a');
+                link.innerHTML = 'This is the link of the article';
+                link.setAttribute('href', webURL);
+                var liElement1 = document.createElement('li');
+                var liElement2 = document.createElement('li');
+                var liElement3 = document.createElement('li');
+                var liElement4 = document.createElement('li');
+                liElement1.textContent = headline;
+                liElement2.textContent = pubDate;
+                liElement3.textContent = snippet;
+                liElement4.appendChild(link);
+                var ulElement = document.createElement('ul');
+                ulElement.appendChild(liElement1);
+                ulElement.appendChild(liElement2);
+                ulElement.appendChild(liElement3);
+                ulElement.appendChild(liElement4);
+                moonList.appendChild(ulElement);            }
+            
+        };
+    </script>
+  </body>
+</html>
