@@ -28,6 +28,22 @@ body{
     height: 400px;
     width: 720px;
     margin: 100px 0px 25px 0px;
+    display: flex;
+    Z-index: 1;
+    position: relative;
+}
+
+.picturetext{
+    position:absolute;
+    align-items: flex-end;
+    justify-content: flex-end;
+    Z-index: 2;
+    background: grey;
+    opacity: 0.3;
+    width: 720px;
+    height: 100px;
+    font-size: 25px;
+    color: white;
 }
 .featurepic{
     height: 400px;
