@@ -11,7 +11,9 @@
                 <img src = "less.png" alt = "less" height = 20px width = 20px class = 'previous'>
             </div>
             <div class ="image">
+                <div class = "picturetext">lorem impsum bacon</div>
                 <img src = "1.jpeg" alt = "feature_picture" height = 70% width=80% class = "featurepic">
+        
             </div>
             <div class = "right sidebar">
                 <img src = "more.png" alt = "more" height = 20px width =20px class = 'next'>
@@ -26,22 +28,23 @@
         var myText = document.querySelector(".text");
         var nextButton = document.querySelector(".next");
         var previousButton = document.querySelector(".previous");
+        var myPicText = document.querySelector(".picturetext");
         pictures.forEach(function(element, i) {
             var myImage = document.createElement('img');
             myImage.setAttribute('src', element);
             myImage.classList.add("small");
             myImage.addEventListener('click', function(){
                 currentPicture.setAttribute("src", element);
+                myPicText.textContent = element
             });
             myText.appendChild(myImage);
         });
         nextButton.addEventListener('click', function(){
                 var currentPicName = currentPicture.getAttribute('src');
-                currentPicNameArray = currentPicName.split('.');
-                var newPic = currentPicNameArray[0];
                 if (pictures.indexOf(currentPicName) < pictures.length - 1){
                     var indexFoward = pictures[pictures.indexOf(currentPicName)+1];
                     currentPicture.setAttribute('src', indexFoward);
+                    myPicText.textContent = indexFoward;
                 } else {
                     var indexFoward = pictures[pictures.indexOf(currentPicName)];
                     currentPicture.setAttribute('src', indexFoward);
@@ -49,11 +52,10 @@
             });
         previousButton.addEventListener('click', function(){
             var currentPicName = currentPicture.getAttribute('src');
-            currentPicNameArray = currentPicName.split('.');
-            var newPic = currentPicNameArray[0];
             if (pictures.indexOf(currentPicName) > 0){
                 var indexFoward = pictures[pictures.indexOf(currentPicName)-1];
                 currentPicture.setAttribute('src', indexFoward);
+                myPicText.textContent = indexFoward;
             } else {
                 var indexFoward = pictures[pictures.indexOf(currentPicName)];
                 currentPicture.setAttribute('src', indexFoward);
