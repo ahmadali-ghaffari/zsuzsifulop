@@ -21,11 +21,13 @@ body{
     flex-basis: 50px;
     background:white;
     padding: 188px 0px;
+    margin: 100px 0px 25px 0px;
    
 }
 .image{
     height: 400px;
     width: 720px;
+    margin: 100px 0px 25px 0px;
 }
 .featurepic{
     height: 400px;
