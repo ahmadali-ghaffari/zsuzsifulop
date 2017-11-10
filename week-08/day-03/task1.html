@@ -21,30 +21,34 @@
     <div class= "small"></div>
     <script>
         var myRequest = new XMLHttpRequest();
-        myRequest.open("GET", "https://api.giphy.com/v1/stickers/trending?api_key=NcgnTKQWJ0pf2dbsbNfRhc5ItlgXdcoK&limit=25&rating=G", false);
+        myRequest.open("GET", "https://api.giphy.com/v1/stickers/trending?api_key=NcgnTKQWJ0pf2dbsbNfRhc5ItlgXdcoK&limit=25&rating=G");
         myRequest.send(null);
-        var requestAPI = JSON.parse(myRequest.response);
+        
+        myRequest.onload = function(){
+            console.log("start")
+            var requestAPI = JSON.parse(myRequest.response);
+            var smallContainer = document.querySelector(".small");
+            var bigContainer = document.querySelector(".big");
 
-        var smallContainer = document.querySelector(".small");
-        var bigContainer = document.querySelector(".big");
-
-        for (let i = 0; i < 17; i++){
-            var smallPic = document.createElement('img');
-            var bigPic = document.querySelector('.big img');
-            smallPic.setAttribute('src',requestAPI.data[i].images.fixed_width_small_still.url);
-            smallContainer.appendChild(smallPic);
-        };  
-        var smallPicList = document.querySelectorAll(".small img");
-        var BigPic = document.querySelector(".big img");
-        smallPicList.forEach(function(element, i) {
-            element.addEventListener('click', function(){
-                clickOn(i);
-            });
-        }, this);
-
-        function clickOn(i){
-            BigPic.setAttribute('src', requestAPI.data[i].images.downsized.url)
+            for (let i = 0; i < 17; i++){
+                var smallPic = document.createElement('img');
+                var bigPic = document.querySelector('.big img');
+                smallPic.setAttribute('src',requestAPI.data[i].images.fixed_width_small_still.url);
+                smallContainer.appendChild(smallPic);
+            };  
+            var smallPicList = document.querySelectorAll(".small img");
+            var BigPic = document.querySelector(".big img");
+            smallPicList.forEach(function(element, i) {
+                element.addEventListener('click', function(){
+                    BigPic.setAttribute('src', requestAPI.data[i].images.downsized.url)
+                });
+            }, this);
         };
+        console.log("Ready")
+
+    function clickOn(i){
+        
+    };
     
     </script>
   </body>
