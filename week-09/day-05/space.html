@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Space</title>
+    <link rel="stylesheet" type="text/css" href="space.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+  </head>
+  <body>
+    <div class = "upperpicture">
+        <div class ="text">SPACE</div>
+    </div>
+    <div class = "container">
+        <div class = "left">
+            
+        </div>
+
+        <div class = "right">
+            <button>SUBMIT A NEW POST</button>
+            <div class = "white">ABOUT</div>
+            
+            <div class = "center">Share and discuss informative comment on:</div>
+            <ul class="list">
+                <li>Astrophysics</li>
+                <li>Cosmology</li>
+                <li>Space Exploration</li>
+                <li>Planetery Science</li>
+                <li>Astrobiology</li>
+            </ul>
+        </div>
+    </div>
+    
+    
+        <script>
+            'use script';
+            var leftside = document.querySelector(".left");
+            var subLeftSide = document.querySelector(".subdiv");
+    function doRequest(callback) {
+        var x  = new XMLHttpRequest();
+        x.open('GET', 'http://localhost:8080', true);
+        x.onload = function() {
+            var data = JSON.parse(x.responseText).posts;
+            callback(data);
+        };
+        x.send();
+    
+    };
+    
+    function handleData(data){
+        console.log(data)
+        data.forEach(function(element) {
+            let blah = document.createElement('div');
+            blah.innerHTML = element.title;
+            leftside.appendChild(blah);
+            // console.log(element.url)
+
+            let blahURL = document.createElement('a');
+            blahURL.setAttribute('href', element.url);
+            blahURL.innerHTML = element.url
+            leftside.appendChild(blahURL)
+
+            let blahScore = document.createElement("div");
+            blahScore.innerHTML = element.score;
+            leftside.appendChild(blahScore);
+        });
+    }
+doRequest(handleData);
+        </script>
+  </body>
+</html>

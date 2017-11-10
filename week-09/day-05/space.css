@@ -1,0 +1,50 @@
+body{
+    background: lightgrey;
+    font-family: Lato;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+   
+}
+.upperpicture{
+    background-image: url(space.jpg);
+    width: 100%;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.text{
+    color: white;
+    letter-spacing: 40px;
+    font-size: 40px;
+}
+.left{
+    background: white;
+    margin: 20px;
+    width: 60%;
+}
+.right{
+    width: 40%;
+}
+.white{
+    background:white;
+    padding: 10px;
+    font-weight: bold;
+    width: 300px;
+}
+.center{
+    text-align: center;
+}
+button{
+    background: #74B6E3;
+    color:white;
+    font-weight: bold;
+    height: 40px;
+    width: 300px;
+}
+.list{
+    margin: 20px;
+    width: 300px;
+}
