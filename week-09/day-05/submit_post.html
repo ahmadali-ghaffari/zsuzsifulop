@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Space</title>
+    <link rel="stylesheet" type="text/css" href="space.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+  </head>
+  <body>
+    <div class = "upperpicture">
+        <div class ="text">SPACE</div>
+    </div>
+    <div class = "container">
+        <form>
+            <div>Title</div>
+            <input type="text" name="Title" class="title"><br>
+            <div>URL</div>
+            <input type="text" name="url" class="url"><br>
+            <button href = "https://www.origo.hu" class="nextpage">SUBMIT</button> 
+          </form>
+          
+    </div>
+    
+    
+        <script>
+            'use strict'
+            var pageChangeButton = document.querySelector(".nextpage");
+            var titleInput = document.querySelector(".title");
+            var urlInput = document.querySelector(".url");
+
+            function changePage(){
+                //pageChangeButton.setAttribute('href', "https://www.index.hu");
+                var titleText = titleInput.value
+                var urlText = urlInput.value
+                console.log(titleText)
+            }
+            
+
+
+            pageChangeButton.addEventListener('click', changePage)
+            
+        </script>
+  </body>
+</html>
