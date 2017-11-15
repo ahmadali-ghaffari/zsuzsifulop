@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>FoxPlayer</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    
+    <link rel="stylesheet" type="text/css" href="style.css">  
   </head>
   <body>
     <div class="audiocontainer">
@@ -12,30 +11,33 @@
           <div class="left part">
             <div class = "pictures">
               <div class = "foxandplaylist">
-              <img src="fox.jpg" alt="Fox" class="foxy" width = 70px height= 70px>
-              <div class="playlist">Playlist</div>
+                <img src="fox.jpg" alt="Fox" class="foxy" width = 70px height= 70px>
+                <div class="playlist">Playlist</div>
             </div>
             <div class="separator">
                 <img src="plus.jpg" alt="Fox" class="plus" width = 10px height= 10px>
             </div>
             <img src="song.jpg" alt="Song" class="cd" width= 80px height = 80px>
           </div>
-          <a class = "odd song">Song01</a>
-          <a class = "even song">Song01</a>
+          <ul class="playlists">
+          </ul>
       </div>
           <div class = "right part">
               <a class="albumname">
                 <div class="firstline">This is awesome CD</div>
                 <div class="secondline">Volume one</div>
               </a>
-            <a class = "odd song">Song01</a>
-            <a class = "even song">Song01</a>
+              <ul class ="songlists">
+                <li class = "song">Song01</li>
+                <li class = "song">Song01</li>
+              </ul>
           </div>
       </div>
       <audio controls class="playline">
-        <source src="alvin.mp3" type="audio/ogg">
-        <source src="alvin.mp3" type="audio/mpeg">
+        <source src="alvin.mp3" type="audio/mp3">
       </audio>
     </div>
   </body>
+  <script type="text/javascript" src="ajax.js"></script>
+  <script type="text/javascript" src="frontend.js"></script>
 </html>
