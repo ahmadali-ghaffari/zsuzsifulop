@@ -1,0 +1,76 @@
+.body{
+    display:flex;
+    align-items: center;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-family: Calibri;
+}
+.part{
+    width: 300px;;
+    height: 300px;
+    background: #F5F5F5;
+}
+.pictures{
+    display: flex;
+}
+.separator{
+    width: 80px;
+    height: 50px;
+}
+.foxandplaylist{
+    display:flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-family:Calibri;   
+}
+.audiocontainer{
+    display:flex;
+    flex-direction: column;
+    border-radius: 2%;
+}
+.playline{
+    justify-content: center;
+    align-items: center;
+    width: 54%;
+    color:darkslategrey;
+    margin-left: 23%;
+}
+.song{
+    width: 200px;
+    color: darkgrey;
+    padding-bottom: 5px;
+    background-color: #EAEAEA;
+    list-style-type: none;
+    display:flex;
+    justify-content: space-between;
+}
+li:nth-child(even){
+    background-color: white;
+}
+.albumname{
+    background-color: #F5F5F5;
+    padding-bottom: 30px;
+}
+.firstline{
+    font-size: 20px;
+    font-weight: bold;
+    color:darkslategrey;
+}
+.secondline{
+    font-size: 11px;
+    color:darkslategrey;
+}
+.plus{
+    align-content: bottom;
+    justify-content: bottom;
+    align-items: bottom;
+}
+.close{
+    color:black;
+    font-weight: bold;
+}
