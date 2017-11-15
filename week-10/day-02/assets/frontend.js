@@ -18,7 +18,7 @@ const Playlist = function(){
         response.forEach(function(element, i) {
             console.log(response)
             let li = document.createElement('li');
-            li.innerHTML = element.playlist;  //sima listánál element.title volt
+            li.innerHTML = element.playlist;  
             li.setAttribute('class', 'song');      
             root.appendChild(li);
             let X = document.createElement("span");
@@ -32,6 +32,7 @@ const Playlist = function(){
                 highlight(i)});
             }); 
     };
+
     function delete1(){
         ajax('PUT', 'http://localhost:8080/playlist', render);
     };
