@@ -49,9 +49,9 @@
     display:flex;
     justify-content: space-between;
 }
-li:nth-child(even){
+/* li:nth-child(even){
     background-color: white;
-}
+} */
 .albumname{
     background-color: #F5F5F5;
     padding-bottom: 30px;
@@ -73,4 +73,7 @@ li:nth-child(even){
 .close{
     color:black;
     font-weight: bold;
+}
+.blue{
+    background: blue;
 }
