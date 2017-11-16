@@ -11,6 +11,7 @@ var connection = mysql.createConnection({
   password : '1234',
   database : 'audioplayer'
 }); 
+
 connection.connect(function(err){
     if(err){
       console.log("Error connecting to Db");
@@ -18,13 +19,6 @@ connection.connect(function(err){
     }
 console.log("Connection established");
   });
-
-// let listOriginal = [
-//     { "id": 1, "title": "Favorites", "system": 1},
-//     { "id": 2, "title": "Music for programming", "system": 0},
-//     { "id": 3, "title": "Driving", "system": 0},
-//     { "id": 5, "title": "Fox house", "system": 0},
-// ]
 
 let get_playlist = function(){
     let playlist = [];
@@ -48,6 +42,17 @@ app.get('/playlist', function(req, res){
     });
 });
 
+app.get('/playlist/:playlist_id', function(req, res){
+    connection.query('SELECT * FROM tracks WHERE playlist_id =' + req.params.playlist_id, function(err, result, fields){
+        if(err){
+            console.log('error in the connecion querry');
+        } 
+        console.log("Data recived from Db\n");
+        res.send(result);
+    });
+
+});
+
 app.post('/playlist', function(req, res){
     console.log(req.body);
     connection.query("INSERT INTO playlists (playlist) VALUES (" + req.body.playlist + ")", function(err, result, fields){
@@ -61,11 +66,6 @@ app.post('/playlist', function(req, res){
         res.send(JSON.stringify(get_playlist()));
     });
 })
-
-// app.put('/playlist', function(req, res){
-//     listOriginal.pop()
-//     res.send(listOriginal)
-// });
 
 app.get('/favourite', function(req, res){
     connection.query('SELECT * FROM playlists WHERE system = 0 ', function(err, result, fields){
