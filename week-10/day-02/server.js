@@ -53,6 +53,20 @@ app.get('/playlist/:playlist_id', function(req, res){
 
 });
 
+app.post('/add/:string', function(req, res){
+    
+    let q = "INSERT INTO playlists (playlist) values (\"" + req.params.string + "\");";
+    console.log(q);
+    connection.query(q);
+    res.send({'status':'ok'});
+});
+
+app.delete('/delete/:id', function(req, res){
+    console.log(req.params);
+    connection.query('DELETE FROM playlists WHERE id = '+ req.params.id + ' AND system = 0;');
+    res.send({'status': 'ok'})
+});
+
 app.post('/playlist', function(req, res){
     console.log(req.body);
     connection.query("INSERT INTO playlists (playlist) VALUES (" + req.body.playlist + ")", function(err, result, fields){
