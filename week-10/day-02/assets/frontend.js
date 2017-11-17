@@ -4,20 +4,29 @@ const Playlist = function(){
     var plus = document.querySelector(".plus");
     var firstline = document.querySelector(".firstline");
     plus.addEventListener("click", function(){
-        window.prompt("New tracklist!")
+        var newTrack = window.prompt("Type the name of the new tracklist")
+        console.log(newTrack);
+        create(newTrack);
     })
-    
-    function create(nameMe){
-        ajax('POST', 'http://localhost:8080/playlist', console.log, {"playlist" :  nameMe });
-    };
 
     function load(){
         ajax('GET', 'http://localhost:8080/favourite', render)
+        highlight();
     };
 
     function load2(i){
         ajax('GET', 'http://localhost:8080/playlist/' + i, render2)
     }; 
+
+    function delete1(id){
+        ajax('DELETE', 'http://localhost:8080/delete/' + id, console.log);
+        load()
+    }
+
+    function create(newTrack){
+        ajax('POST', 'http://localhost:8080/add/'+ newTrack, load);
+        load();
+    };
 
     let render = function (response){
         while (root.firstChild){
@@ -34,7 +43,9 @@ const Playlist = function(){
             X.setAttribute('class', 'close');
             X.textContent="x"
             X.addEventListener('click', function(){
-                alert("Plan to Close");
+                delete1(i);
+                load();
+
             });
             li.appendChild(X);
             li.addEventListener('click', function(){
@@ -44,10 +55,6 @@ const Playlist = function(){
                 load2(i+1);
                 });
             }); 
-    };
-
-    function delete1(){
-        ajax('PUT', 'http://localhost:8080/playlist', render);
     };
     
     function highlight(index){
@@ -80,7 +87,7 @@ const Playlist = function(){
         render: render,
         highlight: highlight,
         delete1: delete1,
-        create: create,
+        //create: create,
         load: load,
         render2: render2,
         load2: load2
@@ -88,8 +95,5 @@ const Playlist = function(){
 };
     
 let playlistmodule =  Playlist();
-playlistmodule.highlight();
 playlistmodule.load();
 playlistmodule.load2();
-playlistmodule.highlight();
-
