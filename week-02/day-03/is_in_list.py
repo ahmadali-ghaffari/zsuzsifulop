@@ -13,4 +13,3 @@ def checker(second_list):
     return True        
 print(checker(second_list))
     
-    
