@@ -16,6 +16,6 @@ hashmap = {
     3: "say goodbye"
 }
 
-for i in range(len(not_so_cryptic_message)):
-    print(hashmap[not_so_cryptic_message[i]])
+for number in not_so_cryptic_message:
+    print(hashmap[number])
 
