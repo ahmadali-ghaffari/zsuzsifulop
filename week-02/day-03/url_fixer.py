@@ -2,6 +2,7 @@
 # Also, the URL is missing a crutial component, find out what it is and insert it too!
 
 url = "https//www.reddit.com/r/nevertellmethebots"
+
 url = url.replace('bots','odds')
-url = url[:5]+":"+url[5:]
+url = url[:5] + ":" + url[5:]
 print(url)
