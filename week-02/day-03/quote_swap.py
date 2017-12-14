@@ -6,12 +6,10 @@
 
 words = ["What", "I", "do", "create,", "I", "cannot", "not", "understand."]
 
-a=words[2]
+a = words[2]
 print(a)
-words[2]=words[5]
-words[5]=a
+words[2] = words[5]
+words[5] = a
 print(words)
-total=[]
-
-
+total = []
 print(total)
