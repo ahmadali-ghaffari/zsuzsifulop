@@ -3,8 +3,8 @@
 
 girls = ["Eve","Ashley","Bözsi","Kat","Jane"]
 boys = ["Joe","Fred","Béla","Todd","Neef","Jeff"]
+
 order = []
 for i in range(5):
     order += [girls[i]] + [boys[i]]
-
 print(order) 
