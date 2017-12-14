@@ -13,7 +13,8 @@
 # 8 * 15 = 120
 # 9 * 15 = 135
 # 10 * 15 = 150
+
 a = int(input("Please give me a number!"))
 for i in range(0,16):
-    h=i*a
+    h = i * a
     print(str(i) + "*" + str(a) + "=" + str(h))
