@@ -3,6 +3,6 @@
 #   (can have multiple number of arguments)
 
 def printer(parameter):
-    print (parameter)
+    print(parameter)
 
 printer("Zsuzsi")
