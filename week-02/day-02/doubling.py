@@ -3,8 +3,9 @@
 # - Print the result of `doubling(ak)`
 
 def doubling(ak):
-    ak = ak*2
-    #return ak
+    ak = ak * 2
     print(ak)
+
+
 doubling(123)
 
