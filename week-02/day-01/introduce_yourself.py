@@ -3,10 +3,10 @@
 #  - Your name
 #  - Your age
 #  - Your height in meters (as a decimal fraction)
+
 name = input("Your name:")
 age = int(input("Your age:"))
 height = float(input("Your height in meters:"))
-
 print(name)
 print(age)
 print(height)
