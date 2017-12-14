@@ -16,17 +16,17 @@
 # Print the result
 # Exit
 
-number1=int(input("Give me a number: "))
-number2=int(input("Give me a number: "))
-op=str(input("Give me an operator: "))
+number1 = int(input("Give me the first number: "))
+number2 = int(input("Give me the second number: "))
+op = str(input("Choose an operator( + - / % *): "))
 
-if op =="+":
+if op == "+":
     print(number1 + number2)
-elif op =="-":
+elif op == "-":
     print(number1 - number2)
-elif op =="/":
+elif op == "/":
     print(number1 / number2)
-elif op =="%":
+elif op == "%":
     print(number1 % number2)
-elif op =="*":
+elif op == "*":
     print(number1 * number2)
