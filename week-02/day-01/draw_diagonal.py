@@ -10,11 +10,7 @@
 # %%%%%
 #
 # The square should have as many lines as the number was
-atikezer [5:53 PM] 
-Diagonal:
-
-
-[5:53] 
+#from Ati
 lines = int(input("Number of lines: "))
 puffer = ""
 
@@ -33,12 +29,6 @@ for k in range(0, lines):
     print (puffer + "\n")
     puffer = ""
 
-
-[5:54] 
-Pyramid:
-
-
-[5:54] 
 lines = int(input("Number of lines: "))
 stars = ""
 spaces = ""
