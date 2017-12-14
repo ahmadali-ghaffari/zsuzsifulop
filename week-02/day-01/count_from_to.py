@@ -11,10 +11,11 @@
 # 3
 # 4
 # 5
-a=int(input("Give me the first number!"))
-b=int(input("Give me the second number!"))
-if b<a:
+
+a = int(input("Give me the first number!"))
+b = int(input("Give me the second number!"))
+if b < a:
     print("The second number should be bigger")
-elif a<b:
+elif a < b:
     for x in range(a,b):
         print(x)
