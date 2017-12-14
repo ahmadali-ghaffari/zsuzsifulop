@@ -9,7 +9,6 @@
 #  - Download games
 #      - Diablo
 
-
 todoText = "My todo:\n - Buy milk\n - Download games\n - Diablo"
 
 print(todoText)
