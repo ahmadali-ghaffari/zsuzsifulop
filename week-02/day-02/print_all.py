@@ -3,4 +3,5 @@
 # - Print all the elements of `af`
 
 af = [4, 5, 6, 7]
+
 print(af[0:])
