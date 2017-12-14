@@ -7,7 +7,7 @@
 # You found the number: 8
 #c=int(input("Think about a number!"))
 
-c=0
+c = 0
 mine = 4
 while c != mine:
     c = int(input("Give me a number!"))
@@ -16,4 +16,4 @@ while c != mine:
     elif mine > c:
         print("The store number is lower")
     elif mine == c:
-        print("You found the number: "+str(mine))
+        print("You found the number: "+ str(mine))
