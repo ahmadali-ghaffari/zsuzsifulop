@@ -1,5 +1,5 @@
-input ="this is what I'm searching in" 
-part="what"
+input = "this is what I'm searching in" 
+part = "what"
 
 index = -1
 for i in range(0, len(input) - len(part) + 1):
