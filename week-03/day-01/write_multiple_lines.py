@@ -14,7 +14,7 @@ number_global = int(input('Give me the repeat number: '))
 def write_into_a_file(path, word, number):
     try:
         file = open(path, "w")
-        for i in range(1, number+1):
+        for i in range(1, number + 1):
             file.write(word + " \n")
     except FileNotFoundError: 
         return 0
