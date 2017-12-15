@@ -1,4 +1,4 @@
-part_global= "ching" 
+part_global = "ching" 
 string_in_global = ["this", "is", "what", "I'm", "searching", "in"]
 
 def string_modules(part, string_in):
