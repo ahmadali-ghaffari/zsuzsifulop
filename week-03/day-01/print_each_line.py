@@ -6,9 +6,11 @@
 def open_me():
     try:
         file = open("my-file.txt", "r")
-        text=file.read()
+        text = file.read()
         print(text)
         file.close
     except FileNotFoundError:
         print('Hey, this file does not exist!')
+
+
 open_me()
