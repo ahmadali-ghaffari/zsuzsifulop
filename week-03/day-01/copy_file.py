@@ -10,15 +10,14 @@ def copy_it(file_original, file_copy):
     try:
         file_original_open = open(file_original, "r")
         text = file_original_open.read()
-        
         file_copy_open = open(file_copy_global, "w")
         file_copy_open.write(text)
-
         file_original_open.close()
         file_copy_open.close()
-        
         print(flag)
     except FileNotFoundError:
         flag = False
         print(flag)
+
+
 copy_it(file_original_global, file_copy_global)
