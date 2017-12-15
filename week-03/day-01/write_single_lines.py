@@ -9,7 +9,6 @@ def write_my_name(source):
     try:
         file = open(source, "w")
         file.write("Hey, I am Zsuzsi")
-        
     except FileNotFoundError:
         print("Unable to write this file " + the_file_source)
 
