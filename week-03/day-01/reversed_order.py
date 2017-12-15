@@ -1,5 +1,7 @@
 # Create a method that decrypts reversed-order.txt
+
 file_name_global = "reversed-order.txt"
+
 def reversed_order(file_name):
     try:
         read_in = open(file_name_global, 'r')
@@ -11,6 +13,7 @@ def reversed_order(file_name):
         print(string)
     except IOError:
         print("Unable to write file: single-chars.txt")
+
 
 reversed_order(file_name_global)
         
