@@ -19,4 +19,5 @@ def write_into_a_file(path, word, number):
     except FileNotFoundError: 
         return 0
 
+
 write_into_a_file(path_global, word_global, number_global)
