@@ -1,5 +1,5 @@
-# Bemenet:"alma"
-#Kiírja, hogy az egyes betűkből hány található a szóban {"a": 2, "l":1, "m":1}
+#input: apple
+#it write out that a:1 p:2 l:1 e:1
 
 def count_letters(text):
     counted_letters = {}
@@ -9,5 +9,6 @@ def count_letters(text):
         else:
             counted_letters[letter] = 1
     return counted_letters
+
 
 print(count_letters("alma"))
