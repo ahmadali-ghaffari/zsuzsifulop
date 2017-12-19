@@ -5,6 +5,6 @@ def count_down(n):
         return 0
     else:
         print(n)
-        return count_down(n-1)
+        return count_down(n - 1)
 
 count_down(20)
