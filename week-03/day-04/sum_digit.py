@@ -8,4 +8,5 @@ def sum_digits(n):
     else:
         return n % 10 + sum_digits(n // 10)
 
+
 print(sum_digits(1264))
