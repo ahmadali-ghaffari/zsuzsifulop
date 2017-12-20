@@ -25,20 +25,4 @@ class Farm():
         self.animal.remove(min_hunger)
 
 
-
 animal_list = Farm()
-animal_list.animal[0]
-animal_list.breed()
-print(animal_list.animal) # kilistázza az összes elemet
-print(animal_list.animal[0])
-print(animal_list.animal[1])
-print(animal_list.animal[2])
-
-#az egyik kicsit éhesebb lesz
-animal_list.animal[2].eat()
-animal_list.animal[2].eat()
-animal_list.animal[2].eat()
-animal_list.animal[1].eat()
-
-animal_list.slaughter()
-print(animal_list.animal)
