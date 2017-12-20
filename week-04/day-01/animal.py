@@ -21,10 +21,9 @@ class Animal:
     def play(self):
         self.thirst += 1
         self.hunger += 1
-        print("Left: " +str(self.hunger) + " Left: " +str(self.thirst))
+        print("Left: " + str(self.hunger) + " Left: " + str(self.thirst))
 
 lion = Animal()
-
 lion.eat()
 lion.drink()
 lion.play()
