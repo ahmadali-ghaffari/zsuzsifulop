@@ -32,6 +32,7 @@ class Plant(object):
             else:
                 print(print("The " + tree.color + "tree does not needs water"))
 
+
 class Flower(Plant):
     flower_wateramount = 0
 
@@ -39,18 +40,16 @@ class Flower(Plant):
         self.color = color
     
 
-
 class Tree(object):
     tree_wateramount = 0
 
     def __init__(self, color):
         self.color = color
-    
+
+  
 palantak = Plant()
-
 palantak.add_flowers("red")
-palantak.add_trees("green")   
-
+palantak.add_trees("green")
 palantak.warering(10)
 palantak.warering(10)
 palantak.print_out()
