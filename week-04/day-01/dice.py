@@ -10,13 +10,13 @@ class Dice(object):
             self.dice[i] = random.randint(1,6)
         return self.dice
 
-    def get_current(self, index=None):
+    def get_current(self, index = None):
         if index != None:
             return self.dice[index]
         else:
             return self.dice
 
-    def reroll(self, index=None):
+    def reroll(self, index = None):
         if index != None:
             self.dice[index] = random.randint(1,6)
         else:
