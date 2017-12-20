@@ -20,6 +20,7 @@ class Car():
     def refill(self):
         Station.gas_amount -= self.capacity
 
+
 Audi = Car()
 Audi.refill()
 
