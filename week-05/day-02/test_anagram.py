@@ -5,7 +5,6 @@ class TestExtend(unittest.TestCase):
     def test_angram_maker(self):
         self.assertTrue(anagram.decide_anagram("alma", "mala"))
 
-
     def test_one_letter_is_different(self):
          self.assertFalse(anagram.decide_anagram("alma", "almm"))
 
