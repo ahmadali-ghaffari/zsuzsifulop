@@ -10,9 +10,6 @@ class Person:
     def get_goal(self):
         print("My goal is: Live for the moment!")
 
-person = Person()
-person.introduce()
-person.get_goal()
 
 class Student(Person):
     def __init__(self, name="Jane Doe", age=30, gender="female", previous_organization="School of Life", skipped_days = 0):
@@ -29,12 +26,6 @@ class Student(Person):
     def skip_days(self, number_of_days):
         self.skipped_days += number_of_days
        
-        
-
-student = Student()
-student.skip_days(3)
-student.introduce()
-student.get_goal()
 
 class Mentor(Person):
     def __init__(self, name="Jane Doe", age=30, gender="female", level ="intermediate"):
@@ -47,9 +38,6 @@ class Mentor(Person):
     def introduce(self):
         print("Hello, I'm " + self.name + " a " + str(self.age) + " years old " + self.gender + " " +self.level + " mentor.")
 
-mentor = Mentor()
-mentor.introduce()
-mentor.get_goal()
 
 class Sponsor(Person):
     def __init__(self, name="Jane Doe", age=30, gender="female", company ="Google", hired_students = 0):
@@ -65,11 +53,7 @@ class Sponsor(Person):
     
     def hire(self):
         self.hired_students += 1
-        
-    
-sponsor = Sponsor()
 
-sponsor.introduce()
 
 class Pallida(object):
     def __init__(self, classname):
@@ -85,6 +69,19 @@ class Pallida(object):
 
 
 people = []
+
+person = Person()
+person.introduce()
+person.get_goal()
+student = Student()
+student.skip_days(3)
+student.introduce()
+student.get_goal()
+mentor = Mentor()
+mentor.introduce()
+mentor.get_goal()
+sponsor = Sponsor()
+sponsor.introduce()
 
 mark = Person('Mark', 46, 'male')
 people.append(mark)
