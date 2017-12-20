@@ -1,4 +1,5 @@
 from random import randint, choice
+
 class Pirate(object):
     def __init__(self, name, alive = True, how_much_rum = 0):
         self.name = name
@@ -44,16 +45,7 @@ class Pirate(object):
             else:
                 print('Noones died')
     pirate_alive = []
-    
-    # def add_alive_pirat(self, name):
-    #     self.pirate_alive.append(Pirate(name))
-    #     for pirates in pirate_alive: #ez a rész nem fut le. :()
-    #         if pirates.alive == False:
-    #             self.pirate_alive.remove(Pirate(name))
    
-#class Parrot(object):
-    #def __init__(self, name):
-        #self.name = name
 
 class Ship(Pirate):
     captain_list = ['Ted', 'Robin', 'Barney', 'Lily', 'Marshall']
@@ -68,6 +60,7 @@ class Ship(Pirate):
         self.pirates = randint(1, 5)
         self.captain = self.captain_list[randint(1, 5)]
         print('The captain is ' + self.captain + ' the number of the crew: ' + str(self.pirates))
+
     def ship_battle(self, othership):
         if self.pirates > othership.pirate:
             self.how_much_rum += randint(1, 5)
@@ -79,14 +72,7 @@ class Ship(Pirate):
             return othership.winner
 
 
-
-
-
-
 pirate = Pirate("Jackie")
 pirate2 = Pirate("John")
-
-
-#pirate.brawl(pirate2)
 ship = Ship()
 ship.fill_ship()
