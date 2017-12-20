@@ -27,8 +27,6 @@ class Animal():
 lion = Animal()
 duck = Animal()
 cat = Animal()
-
-
 lion.eat()
 lion.drink()
 lion.play()
