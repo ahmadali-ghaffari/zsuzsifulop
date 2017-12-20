@@ -16,13 +16,7 @@ class Sharpie(object):
 
 sharpie_no1 = Sharpie("blue", 7.26)
 sharpie_no2 = Sharpie("red", 5.45)
-
-#print(sharpie_no1.width)
-
 sharpie_no1.use()
-#print(sharpie_no1.ink_amount)
-
 sharpie_no2.use()
 sharpie_no2.use()
 sharpie_no2.use()
-#print(sharpie_no2.ink_amount)
