@@ -16,6 +16,7 @@
 # If we buy sugar we can raise the CandyShop's amount of sugar and reduce the income by the price of it.
 # The CandyShop should be represented as string in this format:
 # "Inventory: 3 candies, 2 lollipops, Income: 100, Sugar: 400gr"
+
 class Sweets:
     def __init__(self, sweet_type):
         if sweet_type == "lollipop":
@@ -26,6 +27,7 @@ class Sweets:
             self.sugar = 10
             self.price = 20
             self.name = "candy"
+
 
 class CandyShop:
     candy_list = []
@@ -73,13 +75,10 @@ print(candy_shop)
 # Should print out:
 # Invetory: 2 candies, 2 lollipops, Income: 0, Sugar: 270gr
 candy_shop.sell("candy", 1)
-#print(candy_shop)
 # Should print out:
 # "Invetory: 1 candies, 2 lollipops, Income:20, Sugar: 285gr"
 candy_shop.raise_prices(5)
 candy_shop.sell("lollipop", 1)
-
-#print(candy_shop)
 # Should print out:
 # "Invetory: 1 candies, 1 lollipops, Income:35, Sugar: 285gr"
 candy_shop.buy_sugar(300)
