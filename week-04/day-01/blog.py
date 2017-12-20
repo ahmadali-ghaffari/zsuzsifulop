@@ -16,14 +16,10 @@ class Blog:
     def delete(self):
         self.blog.remove(self.blog[0])
     
-    def update(self): #hiányzik, hogy az x-dik helyre legyen beszúrva
+    def update(self):
         self.blog.append(BlogPost())
 
 blog_list = Blog()
 blog_list.blog[1]
-print(blog_list.blog[1])
 blog_list.delete()
-print(blog_list.blog)
-
 blog_list.update()
-print(blog_list.blog)
