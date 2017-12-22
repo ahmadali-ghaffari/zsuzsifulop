@@ -3,9 +3,12 @@
 #   and appends an 'a' character to its end
 # - Print the result of `appendA(am)`
 
+
 am = "kuty"
 
+
 def appendA(string):
-    print (am + string)
+    print(am + string)
+
 
 appendA('a')

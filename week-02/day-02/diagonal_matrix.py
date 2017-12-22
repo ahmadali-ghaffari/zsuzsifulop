@@ -9,11 +9,10 @@
 # - Print this two dimensional list to the output
 
 i = 0
-c = [[], [], [], []]    
+c = [[], [], [], []]
 while (i < 4):
-    a=[0, 0, 0, 0]
+    a = [0, 0, 0, 0]
     a[i] = 1
     c[i] = a
     print(c[i])
     i += 1
-

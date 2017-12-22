@@ -5,6 +5,7 @@
 
 al = "GreenFox"
 
+
 def greet():
     print("Greeting, dear " + al)
 
