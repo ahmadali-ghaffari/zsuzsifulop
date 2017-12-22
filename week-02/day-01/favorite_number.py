@@ -3,4 +3,4 @@
 
 favorite_number = 8
 a = 27
-print ("My favourite number is: " + str(a))
+print("My favourite number is: " + str(a))

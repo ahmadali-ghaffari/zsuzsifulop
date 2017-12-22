@@ -10,5 +10,5 @@
 
 c = int(input("Give me a number"))
 k = "*"
-for i in range(0,c):
+for i in range(0, c):
     print(k * i)

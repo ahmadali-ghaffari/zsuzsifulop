@@ -2,7 +2,7 @@
 # Thw first number represents the number of girls that comes to a party, the
 # second the boys
 # It should print: The party is exellent!
-# If the the number of girls and boys are equal and there are more people coming than 20
+# If the the number of girls and boys are equal and there are more people coming than 20  # nopep8
 # It should print: Quite cool party!
 # It there are more than 20 people coming but the girl - boy ratio is not 1-1
 

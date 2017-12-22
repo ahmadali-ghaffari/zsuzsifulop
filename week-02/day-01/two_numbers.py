@@ -6,7 +6,7 @@
 # Print the integer part of 22 divided by 13
 # Print the reminder of 22 divided by 13
 
-a = 13 
+a = 13
 b = 22
 
 add = a + b

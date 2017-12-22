@@ -14,4 +14,3 @@ print(coding)
 
 average = 52 * 17
 print(coding / avarage)
-

@@ -13,4 +13,3 @@ elif c == 2:
     print("Two")
 else:
     print("A lot")
-

@@ -17,10 +17,10 @@ spaces = ""
 j = 1
 for i in range(0, lines):
     for k in range(0, j):
-        stars += "*"    
+        stars += "*"
     for k in range(0, lines - i):
         spaces += " "
-    print (spaces + stars + "\n")
+    print(spaces + stars + "\n")
     stars = ""
     spaces = ""
     j += 2
@@ -31,10 +31,10 @@ stars = ""
 
 for i in range(0, lines):
     for k in range(0, j):
-        stars += "*"    
+        stars += "*"
     for k in range(0, i+2):
         spaces += " "
-    print (spaces + stars + "\n")
+    print(spaces + stars + "\n")
     stars = ""
     spaces = ""
     j -= 2

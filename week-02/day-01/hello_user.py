@@ -2,4 +2,4 @@
 # The program should ask for the name of the user
 
 x = input("What is your name? ")
-print ("Hello", x)
+print("Hello", x)

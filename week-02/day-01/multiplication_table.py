@@ -1,4 +1,4 @@
-# Create a program that asks for a number and prints the multiplication table with that number
+# Create a program that asks for a number and prints the multiplication table with that number  # nopep8
 #
 # Example:
 # The number 15 should print:
@@ -15,6 +15,6 @@
 # 10 * 15 = 150
 
 a = int(input("Please give me a number!"))
-for i in range(0,16):
+for i in range(0, 16):
     h = i * a
     print(str(i) + "*" + str(a) + "=" + str(h))

@@ -14,8 +14,6 @@ k = "*"
 j = "h"
 d = 5 // 2
 
-for i in range(0,d):
+for i in range(0, d):
     t = c - (2 * d)
     print(j * d + t * k + j * d)
-    
-    

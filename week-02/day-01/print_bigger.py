@@ -5,4 +5,4 @@ b = int(input("Give me the second number!"))
 if a > b:
     print(str(a) + " is bigger than " + str(b))
 else:
-    print(str(b) +" is bigger than " + str(a))
+    print(str(b) + " is bigger than " + str(a))

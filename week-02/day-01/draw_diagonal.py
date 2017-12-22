@@ -10,7 +10,7 @@
 # %%%%%
 #
 # The square should have as many lines as the number was
-#from Ati
+# from Ati
 lines = int(input("Number of lines: "))
 puffer = ""
 
@@ -20,13 +20,13 @@ for k in range(0, lines):
             puffer += "%"
         else:
             puffer = "%"
-            for l in range(1, lines - 1):
-                if l == k:
+            for kk in range(1, lines - 1):
+                if kk == k:
                     puffer += "%"
                 else:
                     puffer += " "
             puffer += "%"
-    print (puffer + "\n")
+    print(puffer + "\n")
     puffer = ""
 
 lines = int(input("Number of lines: "))
@@ -35,10 +35,10 @@ spaces = ""
 j = 1
 for i in range(0, lines):
     for k in range(0, j):
-        stars += "*"    
+        stars += "*"
     for k in range(0, lines - i):
         spaces += " "
-    print (spaces + stars + "\n")
+    print(spaces + stars + "\n")
     stars = ""
     spaces = ""
     j += 2

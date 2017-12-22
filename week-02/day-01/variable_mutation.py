@@ -65,3 +65,4 @@ k = "Apple"
 #fill the k variable with its cotnent 4 times
 k= k * 4
 print(k)
+

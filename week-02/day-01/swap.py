@@ -1,4 +1,4 @@
-#Swap the values of the wariables
+# Swap the values of the wariables
 
 a = 123
 b = 526

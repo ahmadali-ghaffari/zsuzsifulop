@@ -3,7 +3,6 @@
 # "The second number should be bigger"
 #
 # If it is bigger it should count from the first number to the second by one
-# 
 # example:
 #
 # first number: 3, second number: 6, should print:
@@ -17,5 +16,5 @@ b = int(input("Give me the second number!"))
 if b < a:
     print("The second number should be bigger")
 elif a < b:
-    for x in range(a,b):
+    for x in range(a, b):
         print(x)
