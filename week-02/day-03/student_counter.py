@@ -1,4 +1,4 @@
-# create a function that takes a list of students and prints: 
+# create a function that takes a list of students and prints:
 # - how many candies are owned by students
 # create a function that takes a list of students and prints:
 # - Sum of the age of people who have lass than 5 candies
@@ -15,7 +15,7 @@ students = [
 
 def student_canidate():
         for i in range(len(students)):
-                print(students[i]['name'] + " : " + str(students[i]['candies']))
+                print(students[i]['name'] + " : " + str(students[i]['candies']))  # nopep8
 
 
 def sum_age_candies():

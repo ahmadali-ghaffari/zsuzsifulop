@@ -1,6 +1,6 @@
-# Check if the list contains "7" if it contains print "Hoorray" otherwise print "Noooooo"
+# Check if the list contains "7" if it contains print "Hoorray" otherwise print "Noooooo"  # nopep8
 
-numbers = [1, 2, 3, 4, 5, 6, 8];
+numbers = [1, 2, 3, 4, 5, 6, 8]
 contains_seven = False
 
 for current_number in numbers:
