@@ -8,9 +8,10 @@ from tkinter import *
 root = Tk()
 canvas = Canvas(root, width='300', height='300')
 
-def horizontal_lines_50_long(x_cordinate_starting_point, y_coordinate_starting_point):
+
+def horizontal_lines_50_long(x_cordinate_starting_point, y_coordinate_starting_point):  # nopep8
     x_cordinate_ending_point = x_cordinate_starting_point + 50
-    horizontal_lines = canvas.create_line(x_cordinate_starting_point, y_coordinate_starting_point, x_cordinate_ending_point, y_coordinate_starting_point)
+    horizontal_lines = canvas.create_line(x_cordinate_starting_point, y_coordinate_starting_point, x_cordinate_ending_point, y_coordinate_starting_point)  # nopep8
 
 
 horizontal_lines_50_long(70, 20)

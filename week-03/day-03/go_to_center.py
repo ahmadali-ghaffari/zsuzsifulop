@@ -9,9 +9,11 @@ root = Tk()
 canvas = Canvas(root, width='300', height='300')
 canvas.pack()
 
+
 def draw_to_the_center(x_cordinate, y_cordinate):
 
     line_to_the_center = canvas.create_line(x_cordinate, y_cordinate, 150, 150)
+
 
 draw_to_the_center(30, 20)
 draw_to_the_center(20, 40)

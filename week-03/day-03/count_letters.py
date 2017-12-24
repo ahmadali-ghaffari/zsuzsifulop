@@ -1,5 +1,6 @@
-#input: apple
-#it write out that a:1 p:2 l:1 e:1
+# input: apple
+# it write out that a:1 p:2 l:1 e:1
+
 
 def count_letters(text):
     counted_letters = {}

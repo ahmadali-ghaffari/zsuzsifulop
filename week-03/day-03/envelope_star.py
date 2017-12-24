@@ -6,8 +6,10 @@ root = Tk()
 canvas = Canvas(root, width='300', height='300')
 canvas.pack()
 
+
 def line_play_green(a, b, c, d):
     line = canvas.create_line(a, b, c, d, fill="green")
+
 
 i = 0
 while i < 150:

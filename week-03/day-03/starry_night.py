@@ -15,5 +15,5 @@ for i in range(0, 20):
     x_top = random.randint(0, 300)
     y_top = random.randint(0, 300)
     rgb = random.randint(0, 255)
-    stars = canvas.create_rectangle(x_top, y_top, x_top+10, y_top+10, fill = "grey")
+    stars = canvas.create_rectangle(x_top, y_top, x_top+10, y_top+10, fill="grey")  # nopep8
 root.mainloop()

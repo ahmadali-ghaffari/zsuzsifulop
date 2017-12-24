@@ -14,8 +14,9 @@ canvas.pack()
 x_coordinate = 0
 y_coordinate = 0
 
+
 def purple_square(x_coordinate, y_coordinate):
-    square = canvas.create_rectangle(x_coordinate, y_coordinate, x_coordinate + 15, y_coordinate + 15, fill="purple")
+    square = canvas.create_rectangle(x_coordinate, y_coordinate, x_coordinate + 15, y_coordinate + 15, fill="purple")  # nopep8
 
 
 for i in range(0, 300, 15):

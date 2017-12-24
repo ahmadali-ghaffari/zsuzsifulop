@@ -8,6 +8,7 @@ root = Tk()
 canvas = Canvas(root, width='300', height='300')
 canvas.pack()
 
+
 def line_play(a, b, c, d, color):
     line = canvas.create_line(a, b, c, d, fill=color)
 
