@@ -1,5 +1,7 @@
 # Create a method that decrypts the duplicated-chars.txt
 file_name_global = "duplicated-chars.txt"
+
+
 def decrypt(file_name):
     try:
         file = open(file_name, "r")
@@ -14,4 +16,6 @@ def decrypt(file_name):
         decrypt_copy_inside.close()
     except IOError:
         print("Unable to write file: single-chars.txt")
+
+
 decrypt(file_name_global)

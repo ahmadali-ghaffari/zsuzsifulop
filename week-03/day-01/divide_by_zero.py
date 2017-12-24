@@ -5,10 +5,13 @@
 
 number_global = 0
 
+
 def divide(number):
     try:
-        a = 10 / number  
+        a = 10 / number
         print(a)
     except ZeroDivisionError:
         print("Hey, it is 0!")
+
+
 divide(number_global)

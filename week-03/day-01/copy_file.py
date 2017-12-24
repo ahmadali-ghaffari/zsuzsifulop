@@ -5,6 +5,7 @@
 file_original_global = "sample.txt"
 file_copy_global = "sample2.txt"
 
+
 def copy_it(file_original, file_copy):
     flag = True
     try:

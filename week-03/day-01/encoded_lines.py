@@ -2,6 +2,7 @@
 
 file_name_global = 'encoded_lines.txt'
 
+
 def shift_text_to_right(file_name):
     read_in = open(file_name, 'r')
     write_in = open('encoded_lines_copy_inside.txt', 'w')
