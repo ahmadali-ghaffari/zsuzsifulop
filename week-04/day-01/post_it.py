@@ -7,10 +7,12 @@
 # a pink with black text: "Awesome"
 # a yellow with green text: "Superb!"
 
+
 class post_it:
-    background_color =""
+    background_color = ""
     text = ""
     text_color = ""
+
 
 postit1 = post_it()
 postit2 = post_it()
@@ -22,7 +24,7 @@ postit1.text_color = "blue"
 
 postit2.background_color = "pink"
 postit2.text = "Awesome"
-postit2.text_color ="black"
+postit2.text_color = "black"
 
 postit3.background_color = "yellow"
 postit3.text = "Superb"

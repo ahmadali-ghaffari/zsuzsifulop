@@ -5,9 +5,10 @@
 # list of BlogPosts
 # add BlogPosts to your list
 # delete(int) one item at given index
-# update(int, BlogPost) one item at the given index and update it with another BlogPost
+# update(int, BlogPost) one item at the given index and update it with another BlogPost  # nopep8
 
 from blog_post import BlogPost
+
 
 class Blog:
     def __init__(self):
@@ -15,9 +16,10 @@ class Blog:
 
     def delete(self):
         self.blog.remove(self.blog[0])
-    
+
     def update(self):
         self.blog.append(BlogPost())
+
 
 blog_list = Blog()
 blog_list.blog[1]

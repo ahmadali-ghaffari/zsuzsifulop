@@ -7,16 +7,17 @@
 
 from animal import Animal
 
+
 class Farm():
     def __init__(self):
         self.animal = [Animal(), Animal()]
-    
+
     def breed(self):
         empty_spaces = 5
         if empty_spaces > 0:
             self.animal.append(Animal())
-            empty_spaces -= 1 
-    
+            empty_spaces -= 1
+
     def slaughter(self):
         min_hunger = self.animal[0]
         for j in self.animal:

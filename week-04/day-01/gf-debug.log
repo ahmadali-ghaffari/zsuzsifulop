@@ -1,0 +1,19 @@
+TIMESTAMP       2017-12-26T14:57:09.771156Z
+LEVEL           CRITICAL
+MESSAGE         Unhandled exception: %s
+SYSTEM          Windows 10
+GH_HANDLE       zsuzsifulop
+COMMAND         C:\Users\Zsuzsi\AppData\Local\Programs\Python\Python36-32\Scripts\gf lint blog
+FEATURE         INVALID
+TYPE            <class 'KeyError'>
+VALUE           Exception: 'blog'
+TRACEBACK       File "C:\Users\Zsuzsi\AppData\Local\Programs\Python\Python36-32\Scripts\gf-script.py", line 11, in <module>
+    load_entry_point('workshop-toolchain==2.5.1', 'console_scripts', 'gf')()
+  File "C:\Users\Zsuzsi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\workshop_toolchain-2.5.1-py3.6.egg\gf\app_starter.py", line 15, in main
+    app_controller.run()
+  File "C:\Users\Zsuzsi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\workshop_toolchain-2.5.1-py3.6.egg\gf\app_controller.py", line 15, in run
+    task_check(argv[1])()
+  File "C:\Users\Zsuzsi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\workshop_toolchain-2.5.1-py3.6.egg\gf\app_controller.py", line 76, in lint
+    lint_service.start(filename_maker(argv[2]))
+  File "C:\Users\Zsuzsi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\workshop_toolchain-2.5.1-py3.6.egg\gf\lint\lint_service.py", line 24, in start
+    result = lint(lint_commands[get_extension(filename)] + " " + filename)

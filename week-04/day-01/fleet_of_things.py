@@ -16,7 +16,7 @@ print(item_2)
 item_3 = Thing("Stand up")
 item_3.complete()
 print(item_3)
-item_4 =Thing("Eat Lunch")
+item_4 = Thing("Eat Lunch")
 item_4.complete()
 print(item_4)
 
