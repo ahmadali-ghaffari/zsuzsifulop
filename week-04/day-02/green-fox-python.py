@@ -3,54 +3,54 @@ class Person:
         self.name = name
         self.age = age
         self.gender = gender
-    
+
     def introduce(self):
-        print("Hello, I'm " + self.name + " a " + str(self.age) + " years old " + self.gender + "." )
+        print("Hello, I'm " + self.name + " a " + str(self.age) + " years old " + self.gender + ".")  # nopep8
 
     def get_goal(self):
         print("My goal is: Live for the moment!")
 
 
 class Student(Person):
-    def __init__(self, name="Jane Doe", age=30, gender="female", previous_organization="School of Life", skipped_days = 0):
+    def __init__(self, name="Jane Doe", age=30, gender="female", previous_organization="School of Life", skipped_days=0):  # nopep8
         super().__init__(name, age, gender)
         self.previous_organization = previous_organization
         self.skipped_days = skipped_days
-    
+
     def get_goal(self):
         print("My goal is: Be a junior software developer")
 
     def introduce(self):
-        print("Hello, I'm " + self.name + " a " + str(self.age) + " years old " + self.gender + ", from the " + self.previous_organization + " who skipped " + str(self.skipped_days) + " already." )
-    
+        print("Hello, I'm " + self.name + " a " + str(self.age) + " years old " + self.gender + ", from the " + self.previous_organization + " who skipped " + str(self.skipped_days) + " already.")  # nopep8
+
     def skip_days(self, number_of_days):
         self.skipped_days += number_of_days
-       
+
 
 class Mentor(Person):
-    def __init__(self, name="Jane Doe", age=30, gender="female", level ="intermediate"):
+    def __init__(self, name="Jane Doe", age=30, gender="female", level="intermediate"):  # nopep8
         super().__init__(name, age, gender)
         self.level = level
-    
+
     def get_goal(self):
         print("Educate brilliant junior software developers.")
 
     def introduce(self):
-        print("Hello, I'm " + self.name + " a " + str(self.age) + " years old " + self.gender + " " +self.level + " mentor.")
+        print("Hello, I'm " + self.name + " a " + str(self.age) + " years old " + self.gender + " " + self.level + " mentor.")  # nopep8
 
 
 class Sponsor(Person):
-    def __init__(self, name="Jane Doe", age=30, gender="female", company ="Google", hired_students = 0):
+    def __init__(self, name="Jane Doe", age=30, gender="female", company="Google", hired_students=0):  # nopep8
         super().__init__(name, age, gender)
         self.company = company
         self.hired_students = hired_students
-        
+
     def get_goal(self):
         print("Hire brilliant junior software developers.")
-    
+
     def introduce(self):
-        print("Hello, I'm " + self.name + " a " + str(self.age) + " years old " + self.gender + " who represents " + self.company + " and hired " + str(self.hired_students) + " people.")
-    
+        print("Hello, I'm " + self.name + " a " + str(self.age) + " years old " + self.gender + " who represents " + self.company + " and hired " + str(self.hired_students) + " people.")  # nopep8
+
     def hire(self):
         self.hired_students += 1
 
@@ -63,7 +63,7 @@ class Pallida(object):
 
     def add_student(self, Student):
         self.students.append(Student)
-        
+
     def add_mentor(self, Mentor):
         self.mentors.append(Student)
 
@@ -116,5 +116,3 @@ badass.add_student(student)
 badass.add_student(john)
 badass.add_mentor(mentor)
 badass.add_mentor(gandhi)
-
-        

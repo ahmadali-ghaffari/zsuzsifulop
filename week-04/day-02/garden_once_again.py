@@ -6,10 +6,8 @@ class Plant(object):
     def add_flowers(self, color):
         self.flowers.append(Flower(color))
 
-
     def add_trees(self, color):
         self.trees.append(Tree(color))
-   
 
     def warering(self, amount):
         print("Watering with")
@@ -18,7 +16,7 @@ class Plant(object):
             flower.flower_wateramount += 0.75 * self.amount
         for tree in self.trees:
             tree.tree_wateramount += 0.4 * self.amount
-    
+
     def print_out(self):
         for flower in self.flowers:
             if flower.flower_wateramount < 5:
@@ -38,7 +36,7 @@ class Flower(Plant):
 
     def __init__(self, color):
         self.color = color
-    
+
 
 class Tree(object):
     tree_wateramount = 0
@@ -46,7 +44,7 @@ class Tree(object):
     def __init__(self, color):
         self.color = color
 
-  
+
 palantak = Plant()
 palantak.add_flowers("red")
 palantak.add_trees("green")

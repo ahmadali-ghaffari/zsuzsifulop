@@ -1,8 +1,9 @@
 class Flower:
     def __init__(self):
         self.water_amount_flower = 0
+
     def flowerscolors(self, color):
-        if self.water_amount_flower < 5: 
+        if self.water_amount_flower < 5:
             needs_water_or_not = " needs water"
         else:
             needs_water_or_not = " does not need water"
@@ -12,8 +13,9 @@ class Flower:
 class Tree:
     def __init__(self):
         self.water_amount_tree = 0
+
     def treecolors(self, color):
-        if self.water_amount_tree < 10: 
+        if self.water_amount_tree < 10:
             needs_water_or_not = " needs water"
         else:
             needs_water_or_not = " does not need water"
@@ -24,18 +26,17 @@ class Garden():
     def __init__(self):
         self.plant_list = [Flower(), Tree()]
 
-    def irrigate(self,water_amount_irrigate):
+    def irrigate(self, water_amount_irrigate):
         self.water_amount_garden = 1000
         self.water_amount_garden -= water_amount_irrigate
         self.plant_list[1].water_amount_tree += water_amount_irrigate * 0.4
         self.plant_list[1].treecolors("orange")
         self.plant_list[0].water_amount_flower += water_amount_irrigate * 0.75
         self.plant_list[0].flowerscolors("yellow")
-    
 
-flower = Flower()   
+
+flower = Flower()
 tree = Tree()
 garden = Garden()
 garden.irrigate(5)
 garden.irrigate(10)
-
