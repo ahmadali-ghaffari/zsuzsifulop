@@ -5,6 +5,6 @@ class count_letter:
         for letters in word:
             if not letters in dictionary:
                 dictionary[letters] = 1
-            else: 
-                dictionary[letters] +=1
+            else:
+                dictionary[letters] += 1
         return dictionary

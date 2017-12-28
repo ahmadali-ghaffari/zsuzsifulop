@@ -4,4 +4,3 @@ class Anagram:
             return True
         else:
             return False
-
