@@ -7,18 +7,19 @@ root = Tk()
 # root.geometry('600x600')
 
 
-image1 = PhotoImage(file = 'floor.png')
-image2 = PhotoImage(file = 'wall.Png')
-hero_down = PhotoImage(file = 'hero-down.png')
-hero_up = PhotoImage(file = 'hero-up.png')
-hero_left = PhotoImage(file = 'hero-left.png')
-hero_right = PhotoImage(file = 'hero-right.png')
-skeleton = PhotoImage(file = 'skeleton.png')
-boss = PhotoImage(file = 'boss.png')
+image1 = PhotoImage(file='floor.png')
+image2 = PhotoImage(file='wall.Png')
+hero_down = PhotoImage(file='hero-down.png')
+hero_up = PhotoImage(file='hero-up.png')
+hero_left = PhotoImage(file='hero-left.png')
+hero_right = PhotoImage(file='hero-right.png')
+skeleton = PhotoImage(file='skeleton.png')
+boss = PhotoImage(file='boss.png')
 
-canvas = Canvas(root, width = 700, height = 770, bg = 'white')
+canvas = Canvas(root, width=700, height=770, bg='white')
 canvas.pack()
-image_floor = canvas.create_image(35, 35, image = image1)
+image_floor = canvas.create_image(35, 35, image=image1)
+
 
 def map_draw():
     file = open('map.txt', 'r')
@@ -28,26 +29,31 @@ def map_draw():
     for lines in map_plan:
         for elements in range(len(lines)-1):
             if lines[elements] == '1':
-                image_floor = canvas.create_image(elements * 70 + 35, a + 35, image = image2)
+                image_floor = canvas.create_image(elements * 70 + 35, a + 35, image=image2)  # nopep8
             elif lines[elements] == '0':
-                image_floor = canvas.create_image(elements * 70 + 35, a + 35, image = image1)
+                image_floor = canvas.create_image(elements * 70 + 35, a + 35, image=image1)  # nopep8
         a += 70
+
+
 map_draw()
 
-map = [[0, 0, 0, 1, 0, 1, 0, 0, 0, 0], 
-    [0, 0, 0, 1, 0, 1, 0, 1, 1, 0], 
-    [0, 1, 1, 1, 0, 1, 0, 1, 1, 0], 
+map = [
+    [0, 0, 0, 1, 0, 1, 0, 0, 0, 0],
+    [0, 0, 0, 1, 0, 1, 0, 1, 1, 0],
+    [0, 1, 1, 1, 0, 1, 0, 1, 1, 0],
     [0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
-    [1, 1, 1, 1, 0, 1, 1, 1, 1, 0], 
-    [0, 1, 0, 1, 0, 0, 0, 0, 1, 0], 
-    [0, 1, 0, 1, 0, 1, 1, 0, 1, 0], 
+    [1, 1, 1, 1, 0, 1, 1, 1, 1, 0],
+    [0, 1, 0, 1, 0, 0, 0, 0, 1, 0],
+    [0, 1, 0, 1, 0, 1, 1, 0, 1, 0],
     [0, 0, 0, 0, 0, 1, 1, 0, 1, 0],
-    [0, 1, 1, 1, 0, 0, 0, 0, 1, 0], 
-    [0, 0, 0, 1, 0, 1, 1, 0, 1, 0], 
-    [0, 1, 0, 1, 0, 1, 0, 0, 0, 0]]
+    [0, 1, 1, 1, 0, 0, 0, 0, 1, 0],
+    [0, 0, 0, 1, 0, 1, 1, 0, 1, 0],
+    [0, 1, 0, 1, 0, 1, 0, 0, 0, 0]
+]
 
-def wall_or_floor(lines_index, element_index):  
-    for i, lines in enumerate(map): # i=sor indexe, lines=érték
+
+def wall_or_floor(lines_index, element_index):
+    for i, lines in enumerate(map):
         for j, element in enumerate(lines):
             if i == lines_index and j == element_index and element == 0:
                 print(str(element))
@@ -55,12 +61,14 @@ def wall_or_floor(lines_index, element_index):
             elif i == lines_index and j == element_index and element == 1:
                 print(str(element))
                 return 1
-                
+
+
 wall_or_floor(0, 3)
 
 
 def cell_wall():
-    print(get.cell(0,0))
+    print(get.cell(0, 0))
+
 
 class Entity(object):
     def __init__(self):
@@ -69,10 +77,10 @@ class Entity(object):
         self.costume = hero_down
 
     def entity_draw(self):
-        self.image_entity = canvas.create_image(self.x , self.y, image = self.costume)
-       
+        self.image_entity = canvas.create_image(self.x, self.y, image=self.costume)  # nopep8
+
     def move(self, dx, dy):
-        canvas.move(self.image_entity, dx, dy )
+        canvas.move(self.image_entity, dx, dy)
 
     def update_costume(self, costume):
         self.costume = costume
@@ -81,36 +89,33 @@ class Entity(object):
     def on_key_press(self, e):
         coords = canvas.coords(self.image_entity)
         print(coords)
-        if ( e.keysym == 'Up' ):
+        if (e.keysym == 'Up'):
             if coords[1] > 35:
-                self.move(0,-70)
+                self.move(0, -70)
                 self.update_costume(hero_up)
                 self.hero.update_costume(hero_up)
-        elif( e.keysym == 'Down' ):
+        elif(e.keysym == 'Down'):
             if coords[1] < 666:
-                self.move(0,70)
+                self.move(0, 70)
                 self.update_costume(hero_down)
-        elif( e.keysym == 'Right' ):
+        elif(e.keysym == 'Right'):
             if coords[0] < 665:
-                self.move(70,0)
+                self.move(70, 0)
                 self.costume = hero_right
                 self.update_costume(hero_right)
-        elif( e.keysym == 'Left' ):
+        elif(e.keysym == 'Left'):
             if coords[0] > 35:
-                self.move(-70,0)
+                self.move(-70, 0)
                 self.costume = hero_left
                 self.update_costume(hero_left)
-        
+
 
 class Hero(Entity):
     def __init__(self):
         pass
 
+
 hero = Entity()
 hero.entity_draw()
-
-
 root.bind("<KeyPress>", hero.on_key_press)
-
 root.mainloop()
-
