@@ -2,7 +2,7 @@ def decide_anagram(word1, word2):
     if word1 == "" or word2 == "":
         return False
     elif word1 == None or word2 == None:
-        return False 
+        return False
     text1 = ""
     for element in word1:
         if element == " ":
@@ -19,7 +19,3 @@ def decide_anagram(word1, word2):
         return True
     else:
         return False
-
-
-
-
