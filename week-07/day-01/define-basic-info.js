@@ -11,4 +11,4 @@ var age = 25;
 var height = 1.7;
 var married = false;
 
-console.log(name, age, height, married)
+console.log(name, age, height, married);

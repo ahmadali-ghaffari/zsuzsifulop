@@ -11,15 +11,15 @@
 //  % % % %
 //
 
-var style01 ="% % % %";
-var style02 =" % % % %";
+var style01 = "% % % %";
+var style02 = " % % % %";
 
 var i;
 
-for (i=1; i<9; i++){
-    if (i%2 === 0){
+for (i = 1; i < 9; i++) {
+    if (i % 2 === 0) {
         console.log(style01);
-    } else{
+    } else {
         console.log(style02);
     }
 }

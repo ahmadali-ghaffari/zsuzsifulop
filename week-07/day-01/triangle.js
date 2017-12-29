@@ -11,8 +11,9 @@ var lineCount = 4;
 // ****
 //
 // The triangle should have as many lines as lineCount is
-var stars= "";
-for (let i=1; i <= lineCount; i++){
+var stars = "";
+var i = 1;
+for (i; i <= lineCount; i++) {
     stars += "*"
     console.log(stars);
 }

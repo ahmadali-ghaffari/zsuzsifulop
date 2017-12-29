@@ -9,5 +9,5 @@ var currentSeconds = 42;
 
 var seconds;
 
-seconds = currentHours*60*60 + currentMinutes * 60 + currentSeconds;
+seconds = currentHours * 60 * 60 + currentMinutes * 60 + currentSeconds;
 console.log(seconds);

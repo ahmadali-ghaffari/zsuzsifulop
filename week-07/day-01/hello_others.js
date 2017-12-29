@@ -8,5 +8,5 @@
 // Hello, Joe!
 
 console.log('Hello, Esther!');
-console.log('Hello, Mary!')
-console.log("Hello, Joe!")
+console.log('Hello, Mary!');
+console.log("Hello, Joe!");

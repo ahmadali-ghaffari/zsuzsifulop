@@ -7,14 +7,14 @@
 // Volume: 1000
 
 var a = 10;
-var b= 20;
-var c= 30;
+var b = 20;
+var c = 30;
 
 var surface;
 var volume;
 
-volume = a * b* c;
-surface = 2*(a*b+b*c+c*a);
+volume = a * b * c;
+surface = 2 * (a * b + b * c + c * a);
 
 console.log("Volume: " + volume);
 console.log("Surface: " + surface);

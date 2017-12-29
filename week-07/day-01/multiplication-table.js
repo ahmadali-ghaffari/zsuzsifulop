@@ -1,7 +1,5 @@
 'use strict';
 
-var number = 15;
-
 // Create a program that
 // prints the multiplication table with number
 //
@@ -19,8 +17,10 @@ var number = 15;
 // 9 * 15 = 135
 // 10 * 15 = 150
 var i = 1;
+var number = 15;
 var result;
-for (i; i<11; i++){
+
+for (i; i < 11; i++) {
     result = i * number;
-    console.log(i + ' * ' + number +" = " + result);
+    console.log(i + ' * ' + number + " = " + result);
 }
