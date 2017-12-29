@@ -5,7 +5,7 @@
 
 var ak = 123;
 
-function doubling(number){
+function doubling() {
     ak *= 2;
     console.log(ak);
 }

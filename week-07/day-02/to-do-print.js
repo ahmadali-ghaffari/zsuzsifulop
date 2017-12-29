@@ -11,5 +11,4 @@
 //      - Diablo
 
 var todoText = " - Buy milk\n - Buy milk\n - Download games\n - Diablo";
-
 console.log(todoText)

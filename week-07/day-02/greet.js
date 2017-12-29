@@ -6,12 +6,12 @@
 // - Greet `al`
 
 var al = 'Greenfox';
-function greet(text){
-    if (al.length > 0){
+
+function greet(text) {
+    if (al.length > 0) {
     console.log('Greetings, dear ' + text);
     } else {
-        console.log("Greating is not possible!")
+        console.log("Greating is not possible!");
     }
 }
-
 greet(al);

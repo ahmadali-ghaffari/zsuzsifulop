@@ -16,15 +16,14 @@ var i = 0;
 var j = 0;
 var matrix = [];
 
-for (i = 0; i < 5; i++){
+for (i = 0; i < 5; i++) {
     matrix[i] = [];
-    for (j = 0; j < 5; j++){
-        if ( i === j){
+    for (j = 0; j < 5; j++) {
+        if (i === j) {
             matrix[i][j] = 1;
         } else {
-            matrix[i][j] =0;
+            matrix[i][j] = 0;
         }
     }
 }
-
 console.log(matrix);

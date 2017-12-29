@@ -10,5 +10,4 @@ function appendA(text) {
     text += "a";
     console.log(text);
 }
-appendA(am)
-
+appendA(am);

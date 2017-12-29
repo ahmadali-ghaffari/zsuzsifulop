@@ -4,5 +4,4 @@
 // - Print the third element of `magicNumbers`
 
 var magicNumbers = [1, 3, 5, 7];
-
-console.log(magicNumbers[2])
+console.log(magicNumbers[2]);

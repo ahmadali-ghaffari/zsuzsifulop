@@ -6,4 +6,3 @@
 var ag = ['Gin', 'Whiskey', 'Wine', 'Beer'];
 var ag_rep = ag.map(x => x + x);
 console.log(ag_rep);
-

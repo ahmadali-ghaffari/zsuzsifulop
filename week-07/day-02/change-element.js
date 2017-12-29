@@ -5,13 +5,11 @@
 
 var s = [1, 2, 3, 8, 5, 6];
 
-var half = s.map(function(x) {
-    if (x === 8){
+var half = s.map(function (x) {
+    if (x === 8) {
         return 4;
-    
    } else {
        return x;
    }
 });
-
 console.log(half[3]);

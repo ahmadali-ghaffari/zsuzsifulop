@@ -6,8 +6,7 @@
 
 var nimals = ["kuty", "macsk", "cic"];
 
-var plus_a = nimals.map(function(x) {
+var plus_a = nimals.map(function (x) {
     return x + 'a';
 });
-
 console.log(plus_a);

@@ -9,18 +9,15 @@ var i = 0;
 var j = 0;
 var bool = true;
 
-for (i=0; i < arr1.length; i++){
-    for (j= 0; j < arr2.length; j++){
-        if (arr1[i] !== arr2[j]){
+for (i = 0; i < arr1.length; i++) {
+    for (j = 0; j < arr2.length; j++) {
+        if (arr1[i] !== arr2[j]) {
             bool = false;
         }
     }
 }
-if (bool){
-    console.log("true"); 
+if (bool) {
+    console.log("true");
 } else {
     console.log("false");
 }
-    
-
-

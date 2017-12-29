@@ -4,11 +4,12 @@
 //   (can have multiple number of arguments)
 
 var parameters_to_write_out = ["Zsuzsi", "Fülöp"];
-function printer(parameter){
+
+function printer(parameter) {
     var i = 0;
-    for (i = 0; i < parameter.length; i++){
+    for (i = 0; i < parameter.length; i++) {
         console.log(parameter[i]);
     }
 }
 
-printer(parameters_to_write_out)
+printer(parameters_to_write_out);

@@ -16,8 +16,7 @@ var hashmap = {
     11: "\n",
     3: "say goodbye "
 };
-for (i = 0; i < notSoCrypticMessage.length; i++){
+for (i = 0; i < notSoCrypticMessage.length; i++) {
     out += hashmap[notSoCrypticMessage[i]];
 }
-
 console.log(out);

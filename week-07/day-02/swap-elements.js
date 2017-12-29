@@ -4,11 +4,10 @@
 
 var abc = ["Arthur", "Boe", "Chloe"];
 
-var swapArrayElements = function(arr, indexA, indexB) {
+var swapArrayElements = function (arr, indexA, indexB) {
     var temp = arr[indexA];
     arr[indexA] = arr[indexB];
     arr[indexB] = temp;
 };
-
 swapArrayElements(abc, 0, 2);
-console.log(abc)
+console.log(abc);

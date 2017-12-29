@@ -9,5 +9,5 @@ var p1 = [1, 2, 3];
 var p2 = [4, 5];
 
 if (p1.length < p2.length) {
-    console.log("P2 has more elements!")
+    console.log("P2 has more elements!");
 }
