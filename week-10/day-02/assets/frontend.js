@@ -10,27 +10,27 @@ const Playlist = function(){
         create(newTrack);
     });
 
-    function load(){
+    function load() {
         ajax('GET', 'http://localhost:8080/favourite', render);
         highlight();
     };
 
-    function load2(i){
-        ajax('GET', 'http://localhost:8080/playlist/' + i, render2)
+    function load2(i) {
+        ajax('GET', 'http://localhost:8080/playlist/' + i, render2);
     };
 
-    function delete1(id){
+    function delete1(id) {
         ajax('DELETE', 'http://localhost:8080/delete/' + id, console.log);
         load()
     };
 
-    function create(newTrack){
+    function create(newTrack) {
         ajax('POST', 'http://localhost:8080/add/'+ newTrack, load);
         load();
     };
 
-    let render = function (response){
-        while (root.firstChild){
+    let render = function (response) {
+        while (root.firstChild) {
             root.removeChild(root.firstChild);
         }
         console.log(response)
@@ -48,33 +48,33 @@ const Playlist = function(){
                 load();
             });
             li.appendChild(X);
-            li.addEventListener('click', function(){
+            li.addEventListener('click', function() {
                 firstline.textContent = element.playlist;
                 highlight(i);
                 rootsongs.innerHTML = "";
-                load2(i+1);
+                load2(i + 1);
                 });
             });
     };
 
-    function highlight(index){
+    function highlight(index) {
         let myList = root.querySelectorAll(".track")
         console.log(myList)
         myList.forEach(function(element, i) {
             element.setAttribute('class', "track song")
-            if (index === i){
+            if (index === i) {
                 element.setAttribute('class', "track song blue")
             };
         });
     };
 
-    function render2(response){
+    function render2(response) {
         response.forEach(function(element) {
             let li = document.createElement('li');
             li.innerHTML = element.path;
             li.setAttribute('class', 'song');
             rootsongs.appendChild(li);
-            li.addEventListener('click', function(){
+            li.addEventListener('click', function() {
                 var audio = document.querySelector(".playline")
                 audio.setAttribute('src', element.path);
                 var secondline = document.querySelector(".secondline");
