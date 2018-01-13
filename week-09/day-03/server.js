@@ -9,7 +9,7 @@ app.get('/zsuzsi', function(req, res){
     
     var id = req.query.name
     console.log(req.query.name);
-    res.send('Response send to client::'+req.query.name);
+    res.send('Response send to client::'+ req.query.name);
 });
 //DOUBLING //http://localhost:8080/doubling?input=15
 app.get('/doubling', function(req, res) {
@@ -27,7 +27,7 @@ app.get('/doubling', function(req, res) {
  });
 
 
-//GREETER
+//GREETER http://localhost:8080/greeter?title=student&name=zsuzsi
 app.get('/greeter', function(req, res) {
     if (req.query.title && req.query.name) {
         res.json({
