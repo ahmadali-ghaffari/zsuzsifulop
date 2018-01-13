@@ -79,4 +79,6 @@ app.post('/dountil/:type', function(req, res) {
     }
 });
 
-app.listen(8080);
+app.listen(8080, function () {
+    console.log("Hey, I am working on localhost:8080");
+});
