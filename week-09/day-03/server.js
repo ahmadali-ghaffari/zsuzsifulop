@@ -5,11 +5,11 @@ app.use('/assets', express.static('./assets'));
 app.get('/', function(req, res){
     res.sendFile(__dirname + '/index.html');
 })
+// http://localhost:8080/zsuzsi?name='zsuzsi'
 app.get('/zsuzsi', function(req, res){
-    
     var id = req.query.name
     console.log(req.query.name);
-    res.send('Response send to client::'+ req.query.name);
+    res.send('Response send to client::' + req.query.name);
 });
 //DOUBLING //http://localhost:8080/doubling?input=15
 app.get('/doubling', function(req, res) {
