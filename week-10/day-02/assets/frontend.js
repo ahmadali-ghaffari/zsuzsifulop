@@ -20,13 +20,11 @@ const Playlist = function(){
     };
 
     function delete1(id) {
-        ajax('DELETE', 'http://localhost:8080/delete/' + id, console.log);
-        load()
+        ajax('DELETE', 'http://localhost:8080/delete/' + id, render);
     };
 
     function create(newTrack) {
         ajax('POST', 'http://localhost:8080/add/'+ newTrack, load);
-        load();
     };
 
     let render = function (response) {
@@ -87,7 +85,7 @@ const Playlist = function(){
         render: render,
         highlight: highlight,
         delete1: delete1,
-        //create: create,
+        create: create,
         load: load,
         render2: render2,
         load2: load2
