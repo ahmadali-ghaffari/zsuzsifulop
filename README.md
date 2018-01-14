@@ -6,3 +6,5 @@
 5. [Python file ...](https://github.com/greenfox-academy/zsuzsifulop/blob/master/week-04/day-03/sum_me.py)
 6. [... and test file](https://github.com/greenfox-academy/zsuzsifulop/blob/master/week-04/day-03/sum_test.py)
 7. [Rest backend Day](https://github.com/greenfox-academy/zsuzsifulop/blob/master/week-09/day-03/server.js)
+8. [Class](https://github.com/greenfox-academy/zsuzsifulop/blob/master/week-04/day-01/counter.py)
+9. [Map](https://github.com/greenfox-academy/zsuzsifulop/blob/master/week-08/day-02/map.js)
