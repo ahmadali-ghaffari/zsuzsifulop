@@ -21,7 +21,14 @@ class Counter():
             self.integer += int(number)
 
     def get(self):
+        print(self.integer)
         return self.integer
 
     def reset(self):
         self.__init__()
+
+count = Counter()
+count.add(3)
+count.get()
+count.reset()
+count.get()
