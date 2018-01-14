@@ -9,3 +9,4 @@
 8. [Class](https://github.com/greenfox-academy/zsuzsifulop/blob/master/week-04/day-01/counter.py)
 9. [Map](https://github.com/greenfox-academy/zsuzsifulop/blob/master/week-08/day-02/map.js)
 10. [API](https://github.com/greenfox-academy/zsuzsifulop/blob/master/week-08/day-03/task1.html)
+11. [Class Inheritance](https://github.com/greenfox-academy/zsuzsifulop/blob/master/week-04/day-02/green-fox-python.py)
