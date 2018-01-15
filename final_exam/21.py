@@ -6,15 +6,17 @@
 def difference_two_array(first_list, second_list):
     difference_list = []
     dict_second_elements = {}
+    first_list_sorted = []
+    for element1 in first_list:
+        if element1 not in first_list_sorted:
+            first_list_sorted.append(element1)
     for element2 in second_list:
         if element2 not in dict_second_elements:
             dict_second_elements[element2] = 0
-
-    for element in first_list:
-        if element not in dict_second_elements:
-            difference_list.append(element)
-    print(difference_list)
+    for element3 in first_list_sorted:
+        if element3 not in dict_second_elements:
+            difference_list.append(element3)
     return difference_list
 
 
-difference_two_array([1, 2, 1, 4, 5, 6], [1, 2, 3])
+difference_two_array([1, 1, 3, 5], [1, 3])
